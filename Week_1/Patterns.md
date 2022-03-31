@@ -162,10 +162,10 @@ for(size_t i = 0; i < n; ++i){
 Try writing your own code to print out the following patterns:
 
 ```
-1 2 3 4 3 2 1
-  1 2 3 2 1
-    1 2 1
-      1
+4 2 3 1 2 3 4
+  4 3 2 3 4
+    4 3 4
+      4
 ```
 
 ```
