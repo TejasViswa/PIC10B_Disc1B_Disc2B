@@ -156,3 +156,32 @@ for(size_t i = 0; i < n; ++i){
   cout<<'\n';
 }
 ```
+
+## Exercises:
+
+Try writing your own code to print out the following patterns:
+
+```
+1 2 3 4 3 2 1
+  1 2 3 2 1
+    1 2 1
+      1
+```
+
+```
+      *
+    * * *
+  * * * * *
+* * * * * * *
+  * * * * *
+    * * *
+      *
+```
+```
+
+*       *
+  *   *
+    *
+  *   *
+*       *
+```
