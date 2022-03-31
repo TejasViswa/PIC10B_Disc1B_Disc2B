@@ -178,7 +178,6 @@ Try writing your own code to print out the following patterns:
       *
 ```
 ```
-
 *       *
   *   *
     *
