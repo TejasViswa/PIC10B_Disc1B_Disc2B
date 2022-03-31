@@ -142,7 +142,7 @@ for(size_t i = 0; i < n; ++i){
 0 1 0 1
 ```
 
-To print the above pattern, we write code similar to pattern 5 and add an additional conditions:
+To print the above pattern, we write code similar to pattern 5 and add additional conditions:
 
 ```c++
 int n = 4;
