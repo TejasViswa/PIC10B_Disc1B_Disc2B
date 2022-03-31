@@ -1,3 +1,3 @@
 # PIC10B_Disc2A
 
-There's a README for each discussion folder along with a C++ file.
+There's a markdown file that explains code snippet for each week folder along with a C++ file.
