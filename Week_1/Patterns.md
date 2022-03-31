@@ -1,4 +1,4 @@
-# Creating Patterns with for loops
+# Creating Patterns with for-loops
 
 1. Lets start simple. Lets print the following pattern:
     ```
