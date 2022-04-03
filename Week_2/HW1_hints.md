@@ -8,17 +8,20 @@
   ```
   The size in this constructor initializer list is actually the class member variable and is initialized to the value of the argument variable size.
 - [Further Reference](https://stackoverflow.com/questions/6185020/initializing-member-variables-using-the-same-name-for-constructor-arguments-as-f)
+- Although the above code snippet is fine, it is generally preferred to use a different name in your function definition in your .cpp implementation. For eg:
+  ```c++
+  Square::Square(size_t sz):size(sz){}
+  ```
+  Its fine if the argument variable name is different in your function declaration(variable name is size) in .hpp file and function definition(variable name is sz) in .cpp file.
 
 ## Getting the index for your data vector:
 - Your task is to convert the i and j index values(row and col indexes) of a matrix into a single index value for a vector. How do you do this? We need a function that does: f(i,j) -> index
 - For a 3 by 3 matrix, i and j can take values between 0 to 2 but index value ranges between 0 to 8. eg: f(1,0) -> 3, f(2,1) -> 7
-- Thought of a function yet? It should be: ind = size*i + j
-- Now how do we get the reverse? Looking at the function, it looks like similar to how you represent a number with a quotient and remainder like: N = Q*P + R.
-- Therefore, to get the reverse, we use division and modulo: i = ind//size & j = ind%size where // is integer division
+- Think of a function that can do this.
 
 ## For the is_magic function:
-- For the uniqueness check, loop through data vector and check if its already part of an unordered set (use find function), if it is then its not unique else add this element to your set.
-- Getting row sum is easy because data vector is already arranged row-wise(Make use of modulo operator). You can get the column sum with the same nested for-loop by changing your index function to ind = j*size + i.
+- For the uniqueness check, loop through data vector and check if its already part of an unordered set (You could maybe use the find function), if it is then its not unique else add this element to your set.
+- Get row sum and column sum for each row and column (you could make use of modulo operator) and check if they equal magic_total. Make use of the get function that you previously defined.
 - Remember that there is only 1 right diagonal and 1 left diagonal for any square. Use appropriate if conditions to extract the diagonal sums.
 
 ## Structure for the help_see_magic_potential function:
@@ -28,14 +31,7 @@
 - else
   - if slot is empty
     - for-loop through 1 to size*size
-      - if number is not already used up
-        - set number to data vector and add to used up set
-        - if current slot is start of new row (Row optimization)
-          - if row sum is not reached
-            - Reset number in data vector and remove from used up set
-            - continue to next iteration of loop
-        - Go to next slot (hint: use recursion)
-        - Reset number in data vector and remove from used up set
+      - [Insert your logic to handle this]
   - else
     - Go to next slot (hint: use recursion)
 
