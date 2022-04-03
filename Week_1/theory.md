@@ -105,13 +105,13 @@
   - dynamic_cast
     - This only allows casting from derived to base classes. (If you don't know what this means, that is fine. Just know that this is a good kind of cast)
     - [Further Reading](https://en.cppreference.com/w/cpp/language/dynamic_cast)
-  - static_Cast
+  - static_cast
     - This allows casting between related classes. It can be between base to derived or derived to base. (This is also the good kind of cast)
     - [Futher Reading](https://en.cppreference.com/w/cpp/language/static_cast)
   - reinterpret_cast
     - This allows for casting between any classes that have the same size and they need not be related. If two classes have the same size, then one class can be reinterpreted bitwise into another class. (This is the bad kind of cast. Do not use this unless you really have to)
     - [Further Reading](https://en.cppreference.com/w/cpp/language/reinterpret_cast)
-  - const_Cast
+  - const_cast
     - This allows for casting between non const to const classes and vice versa. (Only if there is an absolute requirement of doing this, avoid using this cast)
     - [Further Reading](https://en.cppreference.com/w/cpp/language/const_cast)
 - Finally, the C-style cast is actually a sequence of combination of const, static and reinterpret casting internally. And, therefore, it does not give you a compiler error when trying to casting two unrelated classes. Thus, we need to avoid using C-style casting.
