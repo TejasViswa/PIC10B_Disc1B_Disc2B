@@ -16,6 +16,29 @@
 - Now how do we get the reverse? Looking at the function, it looks like similar to how you represent a number with a quotient and remainder like: N = Q*P + R.
 - Therefore, to get the reverse, we use division and modulo: i = ind//size & j = ind%size where // is integer division
 
+## For the is_magic function:
+- For the uniqueness check, loop through data vector and check if its already part of an unordered set (use find function), if it is then its not unique else add this element to your set.
+- Getting row sum is easy because data vector is already arranged row-wise(Make use of modulo operator). You can get the column sum with the same nested for-loop by changing your index function to ind = j*size + i.
+- Remember that there is only 1 right diagonal and 1 left diagonal for any square. Use appropriate if conditions to extract the diagonal sums.
+
+## Structure for the help_see_magic_potential function:
+- if exceeded last slot:
+  - if it is a magic square:
+    - print the square
+- else
+  - if slot is empty
+    - for-loop through 1 to size*size
+      - if number is not already used up
+        - set number to data vector and add to used up set
+        - if current slot is start of new row (Row optimization)
+          - if row sum is not reached
+            - Reset number in data vector and remove from used up set
+            - continue to next iteration of loop
+        - Go to next slot (hint: use recursion)
+        - Reset number in data vector and remove from used up set
+  - else
+    - Go to next slot (hint: use recursion)
+
 ## Debugging your code:
 - Use the debugger... a lot. If you haven't used the debugger, then I don't believe that you have solved the question on your own.
 - Test your code on the 3 by 3 square so that you have skip through lesser steps and if your code works for 3 by 3, it should also work for a 4 by 4 square.
