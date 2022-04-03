@@ -2,6 +2,7 @@
 
 ## Constructor Initializer List - Does the argument variable shadow the member variable?
 - Following code snippet is completely fine and it does exactly what you hope it should do:
+  ### Note: This is NOT the complete constructor. Your constructor should also initialize data and magic_total variables
   ```c++
   Square::Square(size_t size):size(size){}
   ```
