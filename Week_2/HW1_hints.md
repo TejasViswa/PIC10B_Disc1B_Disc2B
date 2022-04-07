@@ -24,6 +24,11 @@
 - Get row sum and column sum for each row and column (you could make use of modulo operator) and check if they equal magic_total. Make use of the get function that you previously defined.
 - Remember that there is only 1 right diagonal and 1 left diagonal for any square. Use appropriate if conditions to extract the diagonal sums.
 
+## Within the see_magic_potential:
+- Initialize slots_considered and used_up set
+- Make sure you add all the unique non-zero values that already exist in the data vector to your used_up set
+- Call help_see_magic_potential function
+
 ## Structure for the help_see_magic_potential function:
 - if exceeded last slot:
   - if it is a magic square:
@@ -34,6 +39,8 @@
       - [Insert your logic to handle this]
   - else
     - Go to next slot (hint: use recursion)
+
+Make sure you also insert the row optimization part
 
 ## Debugging your code:
 - Use the debugger... a lot. If you haven't used the debugger, then I don't believe that you have solved the question on your own.
