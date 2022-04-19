@@ -1,3 +1,0 @@
-# April 19 Recording
-
-[Video Link](https://cdnapisec.kaltura.com/p/1467031/sp/146703100/embedIframeJs/uiconf_id/26941012/partner_id/1467031?iframeembed=true&playerId=kaltura_player&entry_id=1_qaks82wm&flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_blb7nulx)
