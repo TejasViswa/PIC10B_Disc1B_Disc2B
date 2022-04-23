@@ -1,4 +1,4 @@
-# General Format for Operator Overloading
+# Operator Overloading Tips:
 
 ## Some general rules for declaring operator overloading:
 - When to declare operator overloading function as a free function or member function?
@@ -30,5 +30,146 @@
     ```c++
     return_type operator+(operand1_datatype,operand2_datatype) = delete;
     ```
-   
 
+## General Format for Operator Overloading
+
+### Unary Operator+,-
+```c++
+X X::operator- () const {
+  return /* a negative copy of *this */;  
+}
+
+X X::operator+ () const {
+  return *this;
+}
+```
+
+### Binary Operator+,-,*,/,%
+```c++
+// Make sure +=,-=,*=,/=,%= are implemented
+
+X operator+ (X const& lhs, X const& rhs) {
+  X tmp(lhs);
+  tmp += rhs;
+  return tmp;
+}
+
+// Similar implementations follow for -,*,/,%
+```
+
+### Operator <<,>>
+```c++
+ostream& operator<< (ostream& os, X const& x) {
+  os << /* the formatted data of rhs you want to print */;
+  return os;
+}
+
+istream& operator>> (istream& is, X& x) {
+  SomeData sd;
+  SomeMoreData smd;
+  if (is >> sd >> smd) {
+    rhs.setSomeData(sd);
+    rhs.setSomeMoreData(smd);
+  }
+  // In case of failure, make sure to include add this: is.setstate(std::ios_base::failbit);
+  return is;
+}
+```
+
+### Operator+=,-=,*=,/=,%=
+```c++
+X& X::operator+= (X const& rhs) {
+  //apply appropriate changes to *this
+  return *this;
+}
+```
+
+### Operator==,!=
+```c++
+bool operator== (X const& lhs, X cosnt& rhs) {
+  return /* check for whatever means equality */
+}
+
+bool operator!= (X const& lhs, X const& rhs) {
+  return !(lhs == rhs);
+}
+```
+
+### Operator<,>,<=,>=
+```c++
+bool operator< (X const& lhs, X const& rhs) {
+  return /* compare whatever defines the order */
+}
+
+bool operator> (X const& lhs, X const& rhs) {
+  return rhs < lhs;
+}
+
+bool operator<= (X const& lhs, X const& rhs) {
+  return ((rhs < lhs) || (rhs == lhs));
+}
+
+bool operator>= (X const& lhs, X const& rhs) {
+  return ((rhs > lhs) || (rhs == lhs));
+}
+
+```
+
+### Operator ++,-- (Post and Pre)
+```c++
+X& X::operator++() { //preincrement 
+  /* somehow increment, e.g. *this += 1*/; 
+  return *this; 
+} 
+
+X X::operator++(int) { //postincrement 
+  X oldValue(*this); 
+  ++(*this); 
+  return oldValue; 
+}
+
+// Similar implementation follows for --
+```
+
+### Operator [] (with and without const overload)
+```c++
+// Here Element_t is the return type which is the datatype of the individual element eg: double
+// Index_t is the datatype of the index eg: size_t
+
+Element_t X::operator[](Index_t const& index){
+  /* Have an if condition to check if the index is out of bounds */
+  return /* Element at that index */
+}
+
+const Element_t& X::operator[](Index_t const& index) const{
+  /* Have an if condition to check if the index is out of bounds */
+  return /* Element at that index */
+}
+```
+
+
+### Operator ()
+```c++
+Return_type X::operator() (/*variable number of arguments*/){
+  return /* whatever your () should do */;
+}
+```
+
+
+### Type conversion operators (eg:int,double,size_t)
+```c++
+//conversion to T, explicit or implicit
+X::operator T() const{
+  return /* whatever your definition of a cast to type T should return */;
+}
+
+//explicit conversion to U const&
+explicit X::operator U const&() const{
+  return /* whatever your definition of a cast to type U should return */;
+} 
+
+//conversion to V&
+V& X::operator V&(){
+  return /* whatever your definition of a cast to type V& should return */;
+}
+```
