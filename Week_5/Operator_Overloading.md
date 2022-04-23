@@ -15,7 +15,7 @@
 - Note: Exceptions exist for all these rules
 ```
 - When to declare a free function within the class using a friend?
-  - In general, whenever the operator needs access to the member variables which are private then you would use the friend keyword. If the implementation does not need access to the provate variables and can instead be accomplished with the help of the public member functions then you can avoid having to use the friend keyword and instead declare the function outside the class as a free function.
+  - In general, whenever the operator needs access to the member variables which are private then you would use the friend keyword. If the implementation does not need access to the private variables and can instead be accomplished with the help of the public member functions then you can avoid having to use the friend keyword and instead declare the function outside the class as a free function.
 - When to use the const keyword for the functions?
   - Whenever we have a accessor function (ie: a function that does not modify any of the member variables), then we can declare it as a const
 - When do we use explicit?
@@ -25,18 +25,18 @@
     explicit operator size_t () const;
     ```
 - When do we use delete?
-  - if we do not want the compiler to not consider a certain function (usually a candidate function that is not declared and called after one or more of the operands are implicitly casted), then we delete its declaration by using the delete keyword.
+  - if we do not want the compiler to consider a certain function (usually a candidate function that is not declared and called after one or more of the operands are implicitly casted), then we delete its declaration by using the delete keyword.
   - eg:
     ```c++
     return_type operator+(operand1_datatype,operand2_datatype) = delete;
     ```
 - How is operator overloading resolved?
-  - The compiler chooses the from its list of suitable candidates which it can call for the function. The function with the least amount of effort(implicit casting) is selected.
-  - Sometimes, when there are multiple equally suitable candidates available, the compiler gets confused and calls the function call ambiguous meaning that the overloading could not be resolved. Then either deleting the other candidates or making the cast explicit will help in resolving the situation. Another solution could be create a separate a function with those specific operands but this solution would be too specific to the scenario and would not help in all the cases.
+  - The compiler chooses the most suitable candidate that it can call from its list of defined functions for the required function call. The function with the least amount of effort(implicit casting) is selected.
+  - Sometimes, when there are multiple equally suitable candidates available, the compiler gets confused and calls the function call ambiguous meaning that the overloading could not be resolved. Then either deleting the other candidates or making the cast explicit will help in resolving the situation. Another solution could be to create a separate function with those specific operands but this solution would be too specific to the scenario and would not help in all the cases.
 
 ## General Format for Operator Overloading
 
-### Unary Operator+,-
+### Unary Operator +,-
 ```c++
 X X::operator- () const {
   return /* a negative copy of *this */;  
@@ -47,14 +47,12 @@ X X::operator+ () const {
 }
 ```
 
-### Binary Operator+,-,*,/,%
+### Binary Operator +,-,*,/,%
 ```c++
 // Make sure +=,-=,*=,/=,%= are implemented
 
 X operator+ (X const& lhs, X const& rhs) {
-  X tmp(lhs);
-  tmp += rhs;
-  return tmp;
+  return tmp += rhs;
 }
 
 // Similar implementations follow for -,*,/,%
@@ -79,15 +77,15 @@ istream& operator>> (istream& is, X& x) {
 }
 ```
 
-### Operator+=,-=,*=,/=,%=
+### Operator +=,-=,*=,/=,%=
 ```c++
 X& X::operator+= (X const& rhs) {
-  //apply appropriate changes to *this
+  // apply appropriate changes to *this
   return *this;
 }
 ```
 
-### Operator==,!=
+### Operator ==,!=
 ```c++
 bool operator== (X const& lhs, X cosnt& rhs) {
   return /* check for whatever means equality */
@@ -98,7 +96,7 @@ bool operator!= (X const& lhs, X const& rhs) {
 }
 ```
 
-### Operator<,>,<=,>=
+### Operator <,>,<=,>=
 ```c++
 bool operator< (X const& lhs, X const& rhs) {
   return /* compare whatever defines the order */
