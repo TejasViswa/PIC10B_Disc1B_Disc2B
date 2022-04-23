@@ -30,6 +30,9 @@
     ```c++
     return_type operator+(operand1_datatype,operand2_datatype) = delete;
     ```
+- How is operator overloading resolved?
+  - The compiler chooses the from its list of suitable candidates which it can call for the function. The function with the least amount of effort(implicit casting) is selected.
+  - Sometimes, when there are multiple equally suitable candidates available, the compiler gets confused and calls the function call ambiguous meaning that the overloading could not be resolved. Then either deleting the other candidates or making the cast explicit will help in resolving the situation. Another solution could be create a separate a function with those specific operands but this solution would be too specific to the scenario and would not help in all the cases.
 
 ## General Format for Operator Overloading
 
@@ -173,3 +176,5 @@ V& X::operator V&(){
   return /* whatever your definition of a cast to type V& should return */;
 }
 ```
+
+[Further Reference](https://arne-mertz.de/2015/01/operator-overloading-common-practice/)
