@@ -25,7 +25,7 @@
     explicit operator size_t () const;
     ```
 - When do we use delete?
-  - if we do not want the compiler to consider a certain function (usually a candidate function that is not declared and called after one or more of the operands are implicitly casted), then we delete its declaration by using the delete keyword.
+  - if we do not want the compiler to consider a certain function (usually a candidate function that is not explicitly declared and called after one or more of the operands are implicitly casted), then we delete its declaration by using the delete keyword.
   - eg:
     ```c++
     return_type operator+(operand1_datatype,operand2_datatype) = delete;
