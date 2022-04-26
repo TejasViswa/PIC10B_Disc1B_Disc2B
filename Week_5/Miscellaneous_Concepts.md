@@ -56,14 +56,19 @@ When returning a reference, be careful that the object being referred to does no
 
 eg:
 ```c++
+#include <iostream>
+
+using namespace std;
+
 const int& foo(){
   int x = 5;
   return x;
 }
-int main(){
+int main() {
   int y = 0;
   y = foo();
-  cout<<y;  \\ The output may or may not be 5
+  cout<<y;  // The output may or may not be 5
   return 0;
 }
 ```
+
