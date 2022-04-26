@@ -81,3 +81,7 @@ Memory leaks in small programs might not look like a big deal, but for long-runn
 To free heap memory, use the key word delete followed by the pointer to the heap memory. Be careful about the memory you freed. If you try to use the pointers to those memory after you free them, it will cause undefined behavior. To avoid such issues, it is good practice to set the value of freed pointers to nullptr immediately after delete. Here is an example that correctly frees memory after using it.
 
 ![image](https://user-images.githubusercontent.com/45400093/165235051-c39f50e4-26fb-4bf4-939e-afc00ee2b742.png)
+
+[Stack vs Heap Allocation Reference](https://courses.engr.illinois.edu/cs225/sp2022/resources/stack-heap/)
+[Stack vs Heap Allocation Differences](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/)
+[Memory Layout of C/C++ Program](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
