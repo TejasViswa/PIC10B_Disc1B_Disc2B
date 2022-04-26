@@ -133,3 +133,39 @@ In the above example, base case for n < = 1 is defined and larger value of numbe
 ![image](https://user-images.githubusercontent.com/45400093/165243555-02eb5b8e-1265-4fab-855a-d33123ed87da.png)
 
 As we can see, the factorial() function is calling itself. However, during each call, we have decreased the value of n by 1. When n is less than 1, the factorial() function ultimately returns the output.
+
+## Algorithms and their Complexity
+
+### Sequential Search
+
+The diagram below shows how this search works. Starting at the first item in the list, we simply move from item to item, following the underlying sequential ordering until we either find what we are looking for or run out of items. If we run out of items, we have discovered that the item we were searching for was not present.
+
+![image](https://user-images.githubusercontent.com/45400093/165247955-f26125a3-30ae-4f0c-84c4-8bb22dcfb6c3.png)
+
+#### Time Complexity
+
+Since a sequential search requires that we go through eah element in a vector/array until the element is found, the complexities can be explained as shown:
+
+![image](https://user-images.githubusercontent.com/45400093/165248212-77272186-4229-4ed6-b710-05f20ec68ca5.png)
+
+### Binary Search
+Binary search is a Divide and Conquer algorithm. Like all divide-and-conquer algorithms, binary search first divides a large array into two smaller subarrays and then recursively (or iteratively) operate the subarrays. But instead of working on both subarrays, it discards one subarray and continues on the second subarray. This decision of discarding one subarray is made in just one comparison.
+ 
+So binary search reduces the search space to half at each step. By search space, we mean a subarray of the given array where the target value is located (if present in the array). Initially, the search space is the entire array, and binary search redefines the search space at every step of the algorithm by using the property of the array that it is sorted. It does so by comparing the mid-value in the search space to the target value. If the target value matches the middle element, its position in the array is returned; otherwise, it discards half of the search space based on the comparison result.
+
+![image](https://user-images.githubusercontent.com/45400093/165249079-b0f6af17-36dd-4fc4-ad41-a3c99a5e0f8f.png)
+
+#### Time Complexity
+
+The question is, how many times can you divide N by 2 until you have 1? This is essentially saying, do a binary search (half the elements) until you found it. In a formula this would be this:
+```
+1 = N/2^x
+// Multiply both sides by 2^x
+2^x = N
+// Taking log_2 on both sides
+log_2(2^x) = log_2(N)
+x * log_2(2) = log_2(N)
+x * 1 = log_2(N)
+x = log_2(N)
+```
+Thus, time complexity is O(log n).
