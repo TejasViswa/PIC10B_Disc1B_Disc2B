@@ -3,12 +3,6 @@
 We write a C++ program and execute it, the operating system of the computer allocates a process which performs all the task mentioned in the program.
 Our program gets assigned a process and each process is allocated some memory and which is divided into below-mentioned segments:
 
-1. Text segment  (i.e. instructions)
-2. Initialized data segment 
-3. Uninitialized data segment  (bss)
-4. Heap 
-5. Stack
-
 ![image](https://user-images.githubusercontent.com/45400093/165229167-26d860d6-0b7b-4f69-919a-a38dd886c00b.png)
 
 By convention, we express these addresses in base 16 numbers. For instance, the smallest possible address is 0x00000000 (where the 0x means base 16), and the largest possible address could be 0xFFFFFFFF.
