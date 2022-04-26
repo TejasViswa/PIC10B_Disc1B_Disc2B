@@ -72,3 +72,63 @@ int main() {
 }
 ```
 
+## Recursion
+
+The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called as recursive function.
+
+### how does this look mathematically?
+Let us consider a problem that a programmer have to determine the sum of first n natural numbers, there are several ways of doing that but the simplest approach is simply add the numbers starting from 1 to n. So the function simply looks like,
+```
+// approach(1) – Simply adding one by one
+
+f(n) = 1 + 2 + 3 + . . . . + n
+```
+but there is another mathematical approach of representing this,
+```
+// approach(2) – Recursive adding 
+
+f(n) = 1             n=1
+
+f(n) = n + f(n-1)    n>1
+```
+There is a simple difference between the approach (1) and approach(2) and that is in approach(2) the function “ f( ) ” itself is being called inside the function, so this phenomenon is named as recursion and the function containing recursion is called recursive function, at the end this is a great tool in the hand of the programmers to code some problems in a lot easier and efficient way.
+
+### What is base condition in recursion? 
+In the recursive program, the solution to the base case is provided and the solution of the bigger problem is expressed in terms of smaller problems.
+```c++
+#include <iostream>
+using namespace std;
+
+int factorial(int);
+
+int main() {
+    int n, result;
+
+    cout << "Enter a non-negative number: ";
+    cin >> n;
+
+    result = factorial(n);
+    cout << "Factorial of " << n << " = " << result;
+    return 0;
+}
+
+int factorial(int n) {
+    if (n > 1) {
+        return n * factorial(n - 1);
+    } else {
+        return 1;
+    }
+}
+```
+Output:
+```c++
+Enter a non-negative number: 4
+Factorial of 4 = 24
+```
+In the above example, base case for n < = 1 is defined and larger value of number can be solved by converting to smaller one till base case is reached.
+
+### Working of factorial program
+
+![image](https://user-images.githubusercontent.com/45400093/165243555-02eb5b8e-1265-4fab-855a-d33123ed87da.png)
+
+As we can see, the factorial() function is calling itself. However, during each call, we have decreased the value of n by 1. When n is less than 1, the factorial() function ultimately returns the output.
