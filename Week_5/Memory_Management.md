@@ -1,4 +1,4 @@
-# Memory ALlocation
+# Memory Management
 
 We write a C++ program and execute it, the operating system of the computer allocates a process which performs all the task mentioned in the program.
 Our program gets assigned a process and each process is allocated some memory and which is divided into below-mentioned segments:
