@@ -83,5 +83,7 @@ To free heap memory, use the key word delete followed by the pointer to the heap
 ![image](https://user-images.githubusercontent.com/45400093/165235051-c39f50e4-26fb-4bf4-939e-afc00ee2b742.png)
 
 [Stack vs Heap Allocation Reference](https://courses.engr.illinois.edu/cs225/sp2022/resources/stack-heap/)
+
 [Stack vs Heap Allocation Differences](https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/)
+
 [Memory Layout of C/C++ Program](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
