@@ -7,7 +7,7 @@
       - eg: +=, -=, *=, /=, %=
     - If the operator does not update any particular object -> make it a free function (either separately defining outside the class or using the friend keyword within the class)
       - eg: +, -, *, /, %
-    - If first operator is of a class that you cannot access (eg:ostream class) -> make it a free function (either separately defining outside the class or using the friend keyword within the class)
+    - If any one operand is of a class that you cannot access (eg:ostream class) -> make it a free function (either separately defining outside the class or using the friend keyword within the class)
       - eg: <<, >>
   - If the operator is unary -> make it a member function
      - eg: ++(pre), ++(post), --(pre), --(post)
