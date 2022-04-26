@@ -40,7 +40,8 @@ You can see in the above program that the variable count is declared as static. 
 ## Returning const references
 
 ### Why return const references?
-You want to return a const reference when you return a property of an object or a variable, that you do not want to be modified outside of it. For example: when your object has a name, you can write the following method:
+You want to return a const reference when you return a member variable of an object, that you do not want to be modified outside of it. (It is also applicable to free functions)
+For example: when your object has a name, you can write the following method:
 ```c++
 const std::string& get_name(){ return name; };
 ```
