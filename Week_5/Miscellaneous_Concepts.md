@@ -169,3 +169,32 @@ x * 1 = log_2(N)
 x = log_2(N)
 ```
 Thus, time complexity is O(log n).
+
+![image](https://user-images.githubusercontent.com/45400093/165403025-4c7c0ebe-16f5-4620-a965-b8b401994eb4.png)
+
+Another way of solving this:
+
+we can establish a recurrence relation T(n)=T(n/2)+1
+
+T(n/2)= T(n/4)+1 therefore T(n)= T(n/4)+2
+
+T(n/4)= T(n/8)+1 therefore T(n)= T(n/8)+3
+
+we can establish a relation
+
+T(n) = T(n/(2^k))+k ----------lets call this as equation 1
+
+and we keep on expanding, we will reach a point where
+
+2^k = n, applying log on both sides
+
+log(2^k) = log(n)
+
+therefore k = log(n)
+putting this value of k in equation 1
+
+T(n) = T(n/(2^(log(n)))) + log(n)
+
+therefore T(n) = T(n/n) + log(n) therefore T(n) = T(1) + log(n)
+
+hence T(n) = log(n)
