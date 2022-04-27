@@ -53,7 +53,7 @@ When it's okay to modify the value of the variable that is referenced.
 
 ### What does it mean if a reference is returned and how can you get undefined behaviour?
 It basically means the returned value is an alias to whatever you returned from the function.
-When returning a reference, be careful that the object being referred to does not go out of scope. So it is not legal to return a reference to local var. But you can always return a reference on a static variable. This is when you enter undefined behaviour.
+When returning a reference, be careful that the object being referred to does not go out of scope. So it is not legal to return a reference to local var. This is when you enter undefined behaviour. On the other hand, you can always return a reference on a static variable.
 
 eg:
 ```c++
