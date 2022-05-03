@@ -157,3 +157,5 @@ Copy constructor has been called
 [Further Reference](https://www.geeksforgeeks.org/when-is-a-copy-constructor-called-in-cpp/)
 ### Copy Constructor vs Assignment Operator
 [Further Reference](https://www.geeksforgeeks.org/copy-constructor-vs-assignment-operator-in-c/)
+
+[Additional Reference](https://www.geeksforgeeks.org/copy-elision-in-c/)
