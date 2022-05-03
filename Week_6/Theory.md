@@ -44,3 +44,28 @@ Output:
 constructed [0x8f0f70]
 constructed : *****
 ```
+### What is difference between instantiating an object using new vs. without?
+- With new： Call operator new function to get dynamic memory(heap), and then to call the constuctor function.
+- Without new: Will not call operator new function, just directly to call the constuctor function. The stack will be used directly instead of heap memory.
+
+[Further Reference](https://stackoverflow.com/questions/3673998/what-is-difference-between-instantiating-an-object-using-new-vs-without#:~:text=Use%20new%EF%BC%9A%20Call%20operator%20new,directly%2C%20no%20use%20to%20malloc.)
+
+## delete
+Delete is an operator that is used to destroy array and non-array(pointer) objects which are created by new expression.
+ 
+
+Delete can be used by either using Delete operator or Delete [ ] operator
+New operator is used for dynamic memory allocation which puts variables on heap memory.
+Which means Delete operator deallocates memory from heap.
+Pointer to object is not destroyed, value or memory block pointed by pointer is destroyed.
+The delete operator has void return type does not return a value.
+
+Therefore, following code snippet does not cause any change and gives no error.
+```c++
+// ptr is NULL pointer
+int* ptr = NULL;
+ 
+// deleting ptr
+delete ptr;
+```
+[Further Reference](https://www.geeksforgeeks.org/delete-in-c/)
