@@ -69,3 +69,91 @@ int* ptr = NULL;
 delete ptr;
 ```
 [Further Reference](https://www.geeksforgeeks.org/delete-in-c/)
+
+## Copy Constructor
+A copy constructor is a member function that initializes an object using another object of the same class.
+
+The default constructor does only shallow copy. Whereas copy constructor allows for deep copy.
+![image](https://user-images.githubusercontent.com/45400093/166435502-8f136627-0f86-48df-be76-b4feb5e48177.png)
+
+```c++
+#include<iostream>
+using namespace std;
+ 
+class Point
+{
+private:
+    int x, y;
+public:
+    Point(int x1, int y1) { x = x1; y = y1; }
+ 
+    // Copy constructor
+    Point(const Point &p1) {x = p1.x; y = p1.y; }
+ 
+    int getX()            {  return x; }
+    int getY()            {  return y; }
+};
+ 
+int main()
+{
+    Point p1(10, 15); // Normal constructor is called here
+    Point p2 = p1; // Copy constructor is called here
+ 
+    // Let us access values assigned by constructors
+    cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY();
+    cout << "\np2.x = " << p2.getX() << ", p2.y = " << p2.getY();
+ 
+    return 0;
+}
+```
+Output:
+```
+p1.x = 10, p1.y = 15
+p2.x = 10, p2.y = 15 
+```
+[Further Reference](https://www.geeksforgeeks.org/copy-constructor-in-cpp/)
+
+## When is a Copy Constructor called?
+The Copy constructor is called mainly when a new object is created from an existing object, as a copy of the existing object. 
+
+In C++, a Copy Constructor may be called for the following cases: 
+
+1) When an object of the class is returned by value. 
+2) When an object of the class is passed (to a function) by value as an argument. 
+3) When an object is constructed based on another object of the same class. 
+4) When the compiler generates a temporary object.
+
+```c++
+// CPP Program to demonstrate the use of copy constructor
+#include <iostream>
+
+using namespace std;
+  
+class storeVal {
+public:
+    // Constructor
+    storeVal() {}
+    // Copy Constructor
+    storeVal(const storeVal& s)
+    {
+        cout << "Copy constructor has been called " << endl;
+    }
+};
+  
+// Driver code
+int main()
+{
+    storeVal obj1;
+    storeVal obj2 = obj1;
+    getchar();
+    return 0;
+}
+```
+Output:
+```
+Copy constructor has been called 
+```
+
+[Further Reference](https://www.geeksforgeeks.org/when-is-a-copy-constructor-called-in-cpp/)
+### Copy Constructor vs Assignment Operator
+[Further Reference](https://www.geeksforgeeks.org/copy-constructor-vs-assignment-operator-in-c/)
