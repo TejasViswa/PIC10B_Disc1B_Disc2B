@@ -13,23 +13,23 @@ The constructor of the class is invoked to properly initialize this memory.
 
 struct MyClassA {
   int data[100];
-  MyClass() {std::cout << "constructed [" << this << "]\n";}
+  MyClassA() {std::cout << "constructed [" << this << "]\n";}
 };
 
 struct MyClassB {
   int data;
-  MyClass() {std::cout << '*';}  // print an asterisk for each construction
+  MyClassB() {std::cout << '*';}  // print an asterisk for each construction
 };
 
 int main () {
 
-  MyClass * p1 = new MyClassA;
+  MyClassA * p1 = new MyClassA;
       // allocates memory by calling: operator new (sizeof(MyClass))
       // and then constructs an object at the newly allocated space
 
   std::cout << "constructed : ";
   // allocates and constructs five objects:
-  MyClass * p2 = new MyClass[5];
+  MyClassB * p2 = new MyClassB[5];
   std::cout << '\n';
   
   delete[] p2;
