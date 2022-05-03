@@ -158,4 +158,6 @@ Copy constructor has been called
 ### Copy Constructor vs Assignment Operator
 [Further Reference](https://www.geeksforgeeks.org/copy-constructor-vs-assignment-operator-in-c/)
 
+[Additional Reference](https://www.geeksforgeeks.org/copy-constructor-argument-const/)
+
 [Additional Reference](https://www.geeksforgeeks.org/copy-elision-in-c/)
