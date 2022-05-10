@@ -249,5 +249,7 @@ baz(const std::string& str) :
 baz(const std::string& str) : 
     This is temporary string object using std::move()
 ```
+
 [Move Semantics Example Reference](https://www.geeksforgeeks.org/stdmove-in-utility-in-c-move-semantics-move-constructors-and-move-assignment-operators/?ref=rp)
+
 [noexcept](https://stackoverflow.com/questions/28627348/noexcept-and-copy-move-constructors)
