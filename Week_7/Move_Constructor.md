@@ -75,4 +75,16 @@ int main()
     D d2 = std::move(d1);
 }
 ```
+Output:
+```c++
+Trying to move A
+Before move, a1.s = "test" a1.k = -1
+After move, a1.s = "" a1.k = 0
+Trying to move B
+Before move, b1.s = "test"
+After move, b1.s = ""
+Trying to move C
+move failed!
+Trying to move D
+```
 [Move Constructors](https://en.cppreference.com/w/cpp/language/move_constructor)
