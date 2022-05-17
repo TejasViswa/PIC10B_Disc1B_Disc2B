@@ -13,13 +13,13 @@ template <class T> class allocator;
 
 Member functions associated with std::allocator() :
 
-address: It is used for obtaining the address of an object although it is removed in C++20.
-construct: It is used to construct an object.It is also removed in C++20.
-destroy: It is used to destruct an object in allocated storage.It is also removed in C++20.
-max_size: It returns the largest supported allocation size.It is deprecated in C++17 and removed in
+- address: It is used for obtaining the address of an object although it is removed in C++20.
+- construct: It is used to construct an object.It is also removed in C++20.
+- destroy: It is used to destruct an object in allocated storage.It is also removed in C++20.
+- max_size: It returns the largest supported allocation size.It is deprecated in C++17 and removed in
 C++20.
-allocate: Used for allocation of memory.
-deallocate: Used for deallocation of memory.
+- allocate: Used for allocation of memory.
+- deallocate: Used for deallocation of memory.
 
 Eg1:
 ```c++
