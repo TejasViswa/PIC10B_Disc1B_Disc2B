@@ -1,4 +1,4 @@
-# Constainers and Memory Allocation:
+# Containers and Memory Allocation:
 
 [Vector Memory Allocation](https://stackoverflow.com/questions/8036474/when-vectors-are-allocated-do-they-use-memory-on-the-heap-or-the-stack#:~:text=So%20no%20matter%20how%20you,always%20allocated%20on%20the%20heap%20.)
 
