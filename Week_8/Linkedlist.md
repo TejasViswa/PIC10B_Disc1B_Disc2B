@@ -375,3 +375,15 @@ Output:
 ```
 Loop found
 ```
+## Remove Loop after detection
+
+- Method 1
+	(Check one by one) We know that Floyd’s Cycle detection algorithm terminates when fast and slow pointers meet at a common point. We also know that this common point is one of the loop nodes. Store the address of this in a pointer variable say ptr2. After that start from the head of the Linked List and check for nodes one by one if they are reachable from ptr2. Whenever we find a node that is reachable, we know that this node is the starting node of the loop in Linked List and we can get the pointer to the previous of this node.
+
+- Method 2
+	This method is also dependent on Floyd’s Cycle detection algorithm.
+	-	Detect Loop using Floyd’s Cycle detection algorithm and get the pointer to a loop node.
+	-	Count the number of nodes in loop. Let the count be k.
+	-	Fix one pointer to the head and another to a kth node from the head.
+	-	Move both pointers at the same pace, they will meet at loop starting node.
+	-	Get a pointer to the last node of the loop and make next of it as NULL.
