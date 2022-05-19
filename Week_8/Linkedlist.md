@@ -302,7 +302,8 @@ Reversed Linked list
 ```
 ## Detect Loops in a linked List without any additional modifications or containers
 
-- Flyod's cycle detection algorithm
+- Floyd's cycle detection algorithm
+	
 	The algorithm is to start two pointers, slow and fast from head of linked list. We move slow one node at a time and fast two nodes at a time. If there is a loop, then they will definitely meet. This approach works because of the following facts.
 
 	1) When slow pointer enters the loop, the fast pointer must be inside the loop. Let fast pointer be distance k from slow.
@@ -378,9 +379,11 @@ Loop found
 ## Remove Loop after detection
 
 - Method 1
+	
 	(Check one by one) We know that Floyd’s Cycle detection algorithm terminates when fast and slow pointers meet at a common point. We also know that this common point is one of the loop nodes. Store the address of this in a pointer variable say ptr2. After that start from the head of the Linked List and check for nodes one by one if they are reachable from ptr2. Whenever we find a node that is reachable, we know that this node is the starting node of the loop in Linked List and we can get the pointer to the previous of this node.
 
 - Method 2
+	
 	This method is also dependent on Floyd’s Cycle detection algorithm.
 	-	Detect Loop using Floyd’s Cycle detection algorithm and get the pointer to a loop node.
 	-	Count the number of nodes in loop. Let the count be k.
