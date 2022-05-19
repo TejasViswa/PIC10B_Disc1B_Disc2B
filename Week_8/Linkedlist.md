@@ -390,7 +390,6 @@ Loop found
 	-	Fix one pointer to the head and another to a kth node from the head.
 	-	Move both pointers at the same pace, they will meet at loop starting node.
 	-	Get a pointer to the last node of the loop and make next of it as NULL.
-![image](https://user-images.githubusercontent.com/45400093/169273259-c7314277-48ce-4af0-9170-fbea86b4ce58.png)
 
 ```c++
 #include <bits/stdc++.h>
