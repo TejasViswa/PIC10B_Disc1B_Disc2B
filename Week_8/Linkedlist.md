@@ -300,3 +300,78 @@ Given linked list
 Reversed Linked list
 20 4 15 85
 ```
+## Detect Loops in a linked List without any additional modifications or containers
+
+- Flyod's cycle detection algorithm
+	The algorithm is to start two pointers, slow and fast from head of linked list. We move slow one node at a time and fast two nodes at a time. If there is a loop, then they will definitely meet. This approach works because of the following facts.
+
+	1) When slow pointer enters the loop, the fast pointer must be inside the loop. Let fast pointer be distance k from slow.
+
+	2) Now if consider movements of slow and fast pointers, we can notice that distance between them (from slow to fast) increase by one after every iteration. After one iteration (of slow = next of slow and fast = next of next of fast), distance between slow and fast becomes k+1, after two iterations, k+2, and so on. When distance becomes n, they meet because they are moving in a cycle of length n.
+
+	For example, we can see in below diagram, initial distance is 2. After one iteration, distance becomes 3, after 2 iterations, it becomes 4. After 3 iterations, it becomes 5 which is distance 0. And they meet.
+```c++
+// C++ program to detect loop in a linked list
+#include <bits/stdc++.h>
+using namespace std;
+
+/* Link list node */
+class Node {
+public:
+	int data;
+	Node* next;
+};
+
+void push(Node** head_ref, int new_data)
+{
+	/* allocate node */
+	Node* new_node = new Node();
+
+	/* put in the data */
+	new_node->data = new_data;
+
+	/* link the old list off the new node */
+	new_node->next = (*head_ref);
+
+	/* move the head to point to the new node */
+	(*head_ref) = new_node;
+}
+
+int detectLoop(Node* list)
+{
+	Node *slow_p = list, *fast_p = list;
+
+	while (slow_p && fast_p && fast_p->next) {
+		slow_p = slow_p->next;
+		fast_p = fast_p->next->next;
+		if (slow_p == fast_p) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+/* Driver code*/
+int main()
+{
+	/* Start with the empty list */
+	Node* head = NULL;
+
+	push(&head, 20);
+	push(&head, 4);
+	push(&head, 15);
+	push(&head, 10);
+
+	/* Create a loop for testing */
+	head->next->next->next->next = head;
+	if (detectLoop(head))
+		cout << "Loop found";
+	else
+		cout << "No Loop";
+	return 0;
+}
+```
+Output:
+```
+Loop found
+```
