@@ -519,6 +519,32 @@ Linked List after removing loop
 	(Optimized Method 2: Without Counting Nodes in Loop) 
 We do not need to count number of nodes in Loop. After detecting the loop, if we start slow pointer from head and move both slow and fast pointers at same speed until fast don’t meet, they would meet at the beginning of the loop.
 
+Working:
+```
+Distance traveled by fast pointer = 2 * (Distance traveled 
+                                         by slow pointer)
+
+(m + n*x + k) = 2*(m + n*y + k)
+
+Note that before meeting the point shown above, fast
+was moving at twice speed.
+
+x -->  Number of complete cyclic rounds made by 
+       fast pointer before they meet first time
+
+y -->  Number of complete cyclic rounds made by 
+       slow pointer before they meet first time
+
+Thus, we get:
+
+m + k = (x-2y)*n
+
+Which means m+k is a multiple of n. 
+Thus we can write, m + k = i*n or m = i*n - k.
+Hence, distance moved by slow pointer: m, is equal to distance moved by fast pointer:
+i*n - k or (i-1)*n + n - k (cover the loop completely i-1 times and start from n-k).
+```
+
 ```c++
 // C++ program to detect and remove loop
 #include <bits/stdc++.h>
