@@ -1,5 +1,6 @@
 # Binary Search Trees
 
+## Find minimum value node in binary search Tree
 ```c++
 //C++ program to find minimum value node in binary search Tree.
 #include <bits/stdc++.h>
