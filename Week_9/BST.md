@@ -87,7 +87,7 @@ return 0;
 }
 
 ```
-
+## Find floor of value
 ```c++
 #include <bits/stdc++.h>
 using namespace std;
