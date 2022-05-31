@@ -157,9 +157,9 @@ unusual way. Please contact the application's support team for
 more information.
 ```
 We can change this abnormal termination behavior by writing our own unexpected function.
-5) A derived class exception should be caught before a base class exception. See this for more details.
+5) A derived class exception should be caught before a base class exception.
 6) Like Java, C++ library has a standard exception class which is base class for all standard exceptions. All objects thrown by components of the standard library are derived from this class. Therefore, all standard exceptions can be caught by catching this type
-7) Unlike Java, in C++, all exceptions are unchecked. Compiler doesn’t check whether an exception is caught or not (See this for details). For example, in C++, it is not necessary to specify all uncaught exceptions in a function declaration. Although it’s a recommended practice to do so. For example, the following program compiles fine, but ideally signature of fun() should list unchecked exceptions. 
+7) Unlike Java, in C++, all exceptions are unchecked. Compiler doesn’t check whether an exception is caught or not. For example, in C++, it is not necessary to specify all uncaught exceptions in a function declaration. Although it’s a recommended practice to do so. For example, the following program compiles fine, but ideally signature of fun() should list unchecked exceptions. 
 ```c++
 #include <iostream>
 using namespace std;
