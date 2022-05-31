@@ -8,7 +8,10 @@ So, in short, following is what the compiler tries to do:
 
 Base class constructor -> Derived class constructor
 
-How to ensure that happens?, do the following:
+Always.
+Even if you don't call the base class constructor within the derived class constructor's initialization list. In this case, the compiler calls the default base class constructor instead because it does not know how to parse the arguments it receives for the derived class constructor for the base class constructor.
+
+Hence, you need to always do the following:
 
 ```c++
 derived_class_constructor (some_arguments) : base_class_constructor(some_arguments) {
