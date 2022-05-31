@@ -10,7 +10,7 @@ Base class constructor -> Derived class constructor
 
 How to ensure that happens?, do the following:
 
-```
+```c++
 derived_class_constructor (some arguments) : base_class_constructor(some_arguments) {
   // function body (maybe throw some exceptions here if some conditions are violated)
 }
