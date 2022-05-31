@@ -22,13 +22,13 @@ In C++, a function can specify the exceptions that it throws using the throw key
 3) Grouping of Error Types: In C++, both basic types and objects can be thrown as exception. We can create a hierarchy of exception objects, group exceptions in namespaces or classes, categorize them according to types.
  
 
-C++ Exceptions:
+## C++ Exceptions:
 
 When executing C++ code, different errors can occur: coding errors made by the programmer, errors due to wrong input, or other unforeseeable things.
 
 When an error occurs, C++ will normally stop and generate an error message. The technical term for this is: C++ will throw an exception (throw an error).
 
-C++ try and catch:
+## C++ try and catch:
 
 Exception handling in C++ consists of three keywords: try, throw and catch:
 
@@ -46,6 +46,6 @@ In the catch block, we catch the error and do something about it. The catch stat
 
 If no error occurs (e.g. if age is 20 instead of 15, meaning it will be be greater than 18), the catch block is skipped:
 
-Exception Handling in C++
+## Exception Handling in C++
 
 1) Following is a simple example to show exception handling in C++. The output of program explains flow of execution of try/catch blocks. 
