@@ -18,3 +18,4 @@ derived_class_constructor (some_arguments) : base_class_constructor(some_argumen
   // function body (maybe throw some exceptions here if some conditions are violated)
 }
 ```
+[Further Reading](https://stackoverflow.com/questions/23647409/error-base-class-constructor-must-explicitly-initialize-parent-class-construct)
