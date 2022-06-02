@@ -90,7 +90,6 @@ Consider the example below:
 ![image](https://user-images.githubusercontent.com/45400093/171596279-e753ae2e-d410-4aa2-80bc-7248a815dc39.png)
 
 ```c++
-![image](https://user-images.githubusercontent.com/45400093/171596336-3896ec73-0028-4b03-84e1-8e47ab79442a.png)
 
 // CPP program to illustrate
 // working of Virtual Functions
