@@ -7,7 +7,7 @@ A virtual function is a member function which is declared within a base class an
 - Functions are declared with a virtual keyword in base class.
 - The resolving of function call is done at runtime.
 
-## Rules for Virtul Functions:
+## Rules for Virtual Functions:
 - Virtual functions cannot be static.
 - A virtual function can be a friend function of another class.
 - Virtual functions should be accessed using pointer or reference of base class type to achieve runtime polymorphism.
@@ -155,6 +155,5 @@ Similar concept of Late and Early Binding is used as in above example. For fun_1
 
 NOTE: fun_4(int) in derived class is different from virtual function fun_4() in base class as prototypes of both the functions are different.
 
-## Limitations of Virtual Functions:
-- Slower: The function call takes slightly longer due to the virtual mechanism and makes it more difficult for the compiler to optimize because it does not know exactly which function is going to be called at compile time.
-- Difficult to Debug: In a complex system, virtual functions can make it a little more difficult to figure out where a function is being called from.
+[ISO CPP Virtual Functions FAQ](https://isocpp.org/wiki/faq/virtual-functions)
+
