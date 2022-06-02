@@ -102,4 +102,4 @@ In C++ polymorphism is mainly divided into two types:
 	  ```
 	  12 + i9
 	  ```
-  In the above example the operator ‘+’ is overloaded. The operator ‘+’ is an addition operator and can add two numbers(integers or floating point) but here the operator is made to perform addition of two imaginary or complex numbers. 
+  	In the above example the operator ‘+’ is overloaded. The operator ‘+’ is an addition operator and can add two numbers(integers or floating point) but here the operator is made to perform addition of two imaginary or complex numbers. 
