@@ -185,5 +185,6 @@ The compiler adds additional code at two places to maintain and use vptr.
 
 2. Code with polymorphic function call (e.g. bp->show() in above code). Wherever a polymorphic call is made, the compiler inserts code to first look for vptr using a base class pointer or reference (In the above example, since the pointed or referred object is of a derived type, vptr of a derived class is accessed). Once vptr is fetched, vtable of derived class can be accessed. Using vtable, the address of the derived class function show() is accessed and called.
 
-Is this a standard way for implementation of run-time polymorphism in C++? 
+**Is this a standard way for implementation of run-time polymorphism in C++?**
+
 The C++ standards do not mandate exactly how runtime polymorphism must be implemented, but compilers generally use minor variations on the same basic model.
