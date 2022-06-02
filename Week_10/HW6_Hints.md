@@ -1,4 +1,4 @@
-# Some useful thoery for HW
+# Some useful theory for HW
 
 ## Call the constructor for base class in constructor initialization list
 
@@ -19,3 +19,25 @@ derived_class_constructor (some_arguments) : base_class_constructor(some_argumen
 }
 ```
 [Further Reading](https://stackoverflow.com/questions/23647409/error-base-class-constructor-must-explicitly-initialize-parent-class-construct)
+
+## throwing exceptions of type logic_error
+
+When you call the constructors of the derived classes, you may need to throw some exceptions when some conditions are violated and the format can be similar to the following:
+
+```c++
+if(some condition is violated){
+  throw std::logic_error("the logical error here");
+}
+```
+Remember that within your main routine, there is a try-catch sequence which can handle such exceptions when thrown. The std::logic_error class has a what argument (basically, the string that you passed in to mention what logical error it is) which can be accessed using the what() function. Also, the std::cerr is an ostream class similar to std::cout used to output error messages to an error window(if there is one) else to the console window.(Here, it basically does the same as std::cout)
+
+## Constructor for UprightRectangle
+
+You have been given a single point on the top left and the length and breadth of the rectangle. Using this information, you can generate 4 points in total (top-left + 3 more points) that are needed for the vector of points for the Polygon constructor. Remember you can access the x and y values of the top-left point (You can create 3 additional point instances). Within the curly braces, make sure you take care of the conditions that violate the mentioned rule by throwing exception.
+
+## Center, Perimeter and Area for UprightRectangle
+
+Using vectices[0] and vertices[2], you can generate length and breadth of the rectangle. Use them appropriately.
+
+
+The remaining tasks are straightforward
