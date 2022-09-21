@@ -43,6 +43,6 @@
 Make sure you also insert the row optimization part
 
 ## Debugging your code:
-- Use the debugger... a lot. If you haven't used the debugger, then I don't believe that you have solved the question on your own.
+- Use the debugger... a lot. Its hard to solve it otherwise.
 - Test your code on the 3 by 3 square so that you have skip through lesser steps and if your code works for 3 by 3, it should also work for a 4 by 4 square.
 - Look at the values of your variables(esp data vector) at each step and verify if they have the expected value. If not, then something in your code must be wrong.
