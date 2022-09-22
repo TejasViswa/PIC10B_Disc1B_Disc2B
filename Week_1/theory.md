@@ -222,7 +222,7 @@
   */
   ```
   Both the outputs are different because the execution takes place according to the order of declaration. In the first program, b is declared first, so b is assigned the value of 10 and then a is declared, later a is assigned twice of b. So, the output is 10 20. In the second program, a is declared first and then b.  So, first, a is assigned twice of b, but b is not initialized yet. So, some garbage value is assigned to a. Later b is assigned the value of 10.
-
+- [Further Reading](https://stackoverflow.com/questions/24285112/why-must-initializer-list-order-match-member-declaration-order)
 
 ## Explicit Casting
 
