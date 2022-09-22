@@ -1,5 +1,11 @@
 # Some Additional Theory
 
+- [Loops](#loops)
+- [Using size_t instead of int](#using-size_t-instead-of-int)
+- [Explicit Casting](#explicit-casting)
+- [const correctness](#const-correctness)
+- [lvalues, rvalues and their references](#lvalues-rvalues-and-their-references)
+
 ## Loops:
 
 - for-loop:
@@ -96,6 +102,19 @@
 
 - A post increment operator is different from a pre increment operator in only one aspect that when it is called, an additional variable is created and the original variable's value is copied to it and incremented unlike the pre increment operator where there is no additional variable being created.
 - Therefore, a pre increment operator is preferred because we avoid the copying.
+  ```c++
+  // Post Increment
+  int n = 0;
+  int a = n++;
+  std::cout<<a<<'\n'; // This will output 0
+  std::cout<<n<<'\n'; // This will also output 1
+  
+  // Pre Increment
+  n = 0;
+  a = ++n;
+  std::cout<<a<<'\n'; // This will output 1
+  std::cout<<n<<'\n'; // This will also output 1
+  ```
 - [Further Readiing](https://en.cppreference.com/w/cpp/language/operator_incdec)
 
 ## Explicit Casting
