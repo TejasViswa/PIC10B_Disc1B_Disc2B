@@ -1,3 +1,5 @@
 # READ ME
 
-# Hello
+# Disc 2B
+
+- [Loops](Theory.md#loops)
