@@ -2,6 +2,8 @@
 
 - [Loops](#loops)
 - [Using size_t instead of int](#using-size_t-instead-of-int)
+- [Overloading Post Increment Operator](#overloading-post-increment-operator)
+- [Constructor Intializer Lists](#constructor-initializer-lists)
 - [Explicit Casting](#explicit-casting)
 - [const correctness](#const-correctness)
 - [lvalues, rvalues and their references](#lvalues-rvalues-and-their-references)
@@ -116,6 +118,111 @@
   std::cout<<n<<'\n'; // This will also output 1
   ```
 - [Further Readiing](https://en.cppreference.com/w/cpp/language/operator_incdec)
+
+## Constructor Initializer Lists
+
+- Initializer List is used in initializing the data members of a class. The list of members to be initialized is indicated with constructor as a comma-separated list followed by a colon. Following is an example that uses the initializer list to initialize x and y of Point class:
+
+  ```c++
+  class Point {
+  private:
+      int x;
+      int y;
+  public:
+      Point(int i = 0, int j = 0):x(i), y(j) {}
+      /*  The above use of Initializer list is optional as the
+          constructor can also be written as:
+          Point(int i = 0, int j = 0) {
+              x = i;
+              y = j;
+          }
+      */   
+
+      int getX() const {return x;}
+      int getY() const {return y;}
+  };
+
+  int main() {
+    Point t1(10, 15);
+    cout<<"x = "<<t1.getX()<<", ";
+    cout<<"y = "<<t1.getY();
+    return 0;
+  }
+  
+  /* 
+  OUTPUT:
+  x = 10, y = 15
+  */
+  
+  ```
+- In the initializer list, the order of execution takes place according to the order of declaration of member variables. While using the initializer list for a class in C++, the order of declaration of member variables affects the output of the program.
+  ```c++
+  // Example 1
+  class MyClass {
+  private:
+      // Declared first
+      int b;
+
+      // Declared Second
+      int a;
+
+  public:
+      MyClass(int value)
+          : b(value), a(b * 2)
+      {
+          cout << b << " " << a;
+      }
+  };
+
+  // Driver Code
+  int main()
+  {
+      // Create an object
+      MyClass obj(10);
+
+      return 0;
+  }
+  
+  /*
+  OUTPUT:
+  10 20
+  */
+  
+  ```
+  ```c++
+  // Example 2
+  class MyClass {
+  private:
+      // Declared first
+      int a;
+
+      // Declared Second
+      int b;
+
+  public:
+      MyClass(int value)
+          : b(value), a(b * 2)
+      {
+          cout << b << " " << a;
+      }
+  };
+
+  int main()
+  {
+
+      // Create an object
+      MyClass obj(10);
+
+      return 0;
+  }
+  
+  /*
+  OUTPUT:
+  10 65528
+  */
+  ```
+  Both the outputs are different because the execution takes place according to the order of declaration. In the first program, b is declared first, so b is assigned the value of 10 and then a is declared, later a is assigned twice of b. So, the output is 10 20. In the second program, a is declared first and then b.  So, first, a is assigned twice of b, but b is not initialized yet. So, some garbage value is assigned to a. Later b is assigned the value of 10.
+
 
 ## Explicit Casting
 
