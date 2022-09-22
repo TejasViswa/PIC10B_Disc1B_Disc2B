@@ -1,4 +1,4 @@
-# Some Additional Theory
+# Theory
 
 - [Loops](#loops)
 - [Using size_t instead of int](#using-size_t-instead-of-int)
