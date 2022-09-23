@@ -106,7 +106,7 @@ In C++ polymorphism is mainly divided into two types:
 	
 ## Runtime Polymorphism
 
-Runtime Polymorphism is achieved with function overriding or vertual functions.
+Runtime Polymorphism is achieved with function overriding or virtual functions.
 
 A virtual function is a member function that is declared in the base class using the keyword virtual and is re-defined (Overriden) in the derived class. It tells the compiler to perform late binding where the compiler matches the object with the right called function and executes it during the runtime.
 
