@@ -276,6 +276,20 @@ y = a
 z = 108
 ```
 - [Further Reading](https://en.cppreference.com/w/cpp/language/implicit_conversion)
+```c++
+// What compiler actually does:
+double d;
+int i;
+
+d += i;
+
+//The above line is really equivalent to:
+
+{
+	double t = static_cast<double>(i);
+	d += t;
+} // t vanishes here
+```
 ## Explicit Casting
 
 - In general, there are mainly 4 types of C++ style casting and 1 C style casting typically used for explicit casting.
