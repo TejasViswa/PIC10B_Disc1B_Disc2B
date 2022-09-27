@@ -11,6 +11,7 @@
 - [More info from Disc 1A](https://github.com/nikunjsanghai/PIC10B_Disc_2B/blob/main/Week1/Notes.md#classes-vs-structs)
 
 ### Tue Sep 27
+- [Executing C++ files](Executing_cpp_files.md)
 - [Function Overloading](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_10/Polymorphism.md#compile-time-polymorphism)
 - [Type Conversions](theory.md#type-conversions)
 
@@ -29,6 +30,7 @@
 - [More info from Disc 1A](https://github.com/nikunjsanghai/PIC10B_Disc_2B/blob/main/Week1/Notes.md#classes-vs-structs)
 
 ### Tue Sep 27
+- [Executing C++ files](Executing_cpp_files.md)
 - [Function Overloading](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_10/Polymorphism.md#compile-time-polymorphism)
 - [Type Conversions](theory.md#type-conversions)
 
