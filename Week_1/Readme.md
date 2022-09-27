@@ -2,7 +2,7 @@
 
 ## For Disc 1B
 
-### 22 Sep, Thu
+### Thu Sep 22
 - [Loops](theory.md#loops)
 - [Patterns](Patterns.md)
 - [Using size_t instead of int](theory.md#using-size_t-instead-of-int)
@@ -10,7 +10,7 @@
 - [Polymorphism](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_10/Polymorphism.md#compile-time-polymorphism)
 - [More info from Disc 1A](https://github.com/nikunjsanghai/PIC10B_Disc_2B/blob/main/Week1/Notes.md#classes-vs-structs)
 
-### 27 Sep, Tue
+### Tue Sep 27
 - [Function Overloading](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_10/Polymorphism.md#compile-time-polymorphism)
 - [Type Conversions](theory.md#type-conversions)
 - [Pointers and References](Pointers_and_memory.md)
@@ -18,7 +18,7 @@
 
 ## For Disc 2B
 
-### 22 Sep, Thu
+### Thu Sep 22
 - [Loops](theory.md#loops)
 - [Patterns](Patterns.md)
 - [Using size_t instead of int](theory.md#using-size_t-instead-of-int)
@@ -26,7 +26,7 @@
 - [Constructor Intializer Lists](theory.md#constructor-initializer-lists)
 - [More info from Disc 1A](https://github.com/nikunjsanghai/PIC10B_Disc_2B/blob/main/Week1/Notes.md#classes-vs-structs)
 
-### 27 Sep, Tue
+### Tue Sep 27
 - [Type Conversions](theory.md#type-conversions)
 - [Constructor Intializer Lists](theory.md#constructor-initializer-lists)
 - [const correctness](theory.md#const-correctness)
