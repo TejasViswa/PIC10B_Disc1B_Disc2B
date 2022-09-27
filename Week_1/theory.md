@@ -4,6 +4,8 @@
 - [Using size_t instead of int](#using-size_t-instead-of-int)
 - [Overloading Post Increment Operator](#overloading-post-increment-operator)
 - [Constructor Intializer Lists](#constructor-initializer-lists)
+- [Type Conversions](#type-conversions)
+- [Implicit Casting](#implicit-casting)
 - [Explicit Casting](#explicit-casting)
 - [const correctness](#const-correctness)
 - [lvalues, rvalues and their references](#lvalues-rvalues-and-their-references)
@@ -224,6 +226,56 @@
   Both the outputs are different because the execution takes place according to the order of declaration. In the first program, b is declared first, so b is assigned the value of 10 and then a is declared, later a is assigned twice of b. So, the output is 10 20. In the second program, a is declared first and then b.  So, first, a is assigned twice of b, but b is not initialized yet. So, some garbage value is assigned to a. Later b is assigned the value of 10.
 - [Further Reading](https://stackoverflow.com/questions/24285112/why-must-initializer-list-order-match-member-declaration-order)
 
+# Type Conversions
+
+A type cast is basically a conversion from one type to another. There are two types of type conversion:
+
+## Implicit Casting
+- Also known as ‘automatic type conversion’.
+- Done by the compiler on its own, without any external trigger from the user.
+- Generally takes place when in an expression more than one data type is present. In such condition type conversion (type promotion) takes place to avoid lose of data.
+- All the data types of the variables are upgraded to the data type of the variable with largest data type.
+```
+bool -> char -> short int -> int -> 
+
+unsigned int -> long -> unsigned -> 
+
+long long -> float -> double -> long double
+```
+- It is possible for implicit conversions to lose information, signs can be lost (when signed is implicitly converted to unsigned), and overflow can occur (when long long is implicitly converted to float).
+```c++
+// An example of implicit conversion
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int x = 10; // integer x
+	char y = 'a'; // character c
+
+	// y implicitly converted to int. ASCII
+	// value of 'a' is 97
+	x = x + y;
+
+	// x is implicitly converted to float
+	float z = x + 1.0;
+
+	cout << "x = " << x << endl
+		<< "y = " << y << endl
+		<< "z = " << z << endl;
+
+	return 0;
+}
+
+```
+Output:
+```
+x = 107
+y = a
+z = 108
+```
+- [Further Reading](https://en.cppreference.com/w/cpp/language/implicit_conversion)
 ## Explicit Casting
 
 - In general, there are mainly 4 types of C++ style casting and 1 C style casting typically used for explicit casting.
