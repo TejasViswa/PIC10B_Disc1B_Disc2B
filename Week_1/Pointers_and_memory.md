@@ -110,3 +110,54 @@
 		*p = y;               // no: can't modify T object referenced by *p
 		```
 - The same above rules apply to `volatile` and in general, `const` and `volatile` are together known as CV qualifiers
+
+## References
+- References provide an alternative to pointers as a way of associating names with objects
+```c++
+int i;
+int &ri = i;
+// ri has type "reference to int"
+// ri is initialized to refer to int
+// Reference ri is an alias for i
+```
+- Reference can be essentially thought of as a const pointer that is dereferenced everytime it is used
+```c++
+int &ri = i; 
+// Equivalent to: 
+int *const cpi = &i;
+
+ri = 4;
+// Equivalent to:
+*cpi = 4;
+
+int j = ri + 2;
+// Equivalent to:
+int j = *cpi + 2;
+```
+- Once a reference is created, it can't be changed to refer to anything else
+```c++
+int i,j;
+int &ri = i;          // binds ri to i
+ri = j;               // assigns j to i through ri
+```
+- Since you can't change what a reference refers to, you must give it a value at the time you define it:
+```c++
+int &ri;              // error: initializer required
+```
+
+## Differences with pointers
+- There's no reference equivalent of a "null pointer"
+	- A pointer with a null value might point to something else in the future
+	- But a reference refers to the same object for its entire lifetime
+	- A reference that started out as "null" would always be "null"
+
+## Dangling reference
+Just like a dangling pointer, you can also have a dangling reference:
+```c++
+	int &f(){
+		int i = 0;
+		~~~
+		return i;            // This is a dangling reference
+	}
+	// The lifetime of the variable i ends with the function call but if the reference that it returns is stored, then the value that this returned reference stores produces undefined behaviour
+```
