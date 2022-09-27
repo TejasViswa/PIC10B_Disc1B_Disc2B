@@ -2,7 +2,7 @@
 
 ## For Disc 1B
 
-### 22 Sep, Thur
+### 22 Sep, Thu
 - [Loops](theory.md#loops)
 - [Patterns](Patterns.md)
 - [Using size_t instead of int](theory.md#using-size_t-instead-of-int)
