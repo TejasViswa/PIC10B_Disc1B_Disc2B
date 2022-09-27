@@ -13,6 +13,8 @@
 ### Tue Sep 27
 - [Function Overloading](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_10/Polymorphism.md#compile-time-polymorphism)
 - [Type Conversions](theory.md#type-conversions)
+
+### Thu Sep 29
 - [Pointers and References](Pointers_and_memory.md)
 - [const correctness](theory.md#const-correctness)
 
@@ -30,3 +32,5 @@
 - [Type Conversions](theory.md#type-conversions)
 - [Constructor Intializer Lists](theory.md#constructor-initializer-lists)
 - [const correctness](theory.md#const-correctness)
+
+### Thu Sep 29
