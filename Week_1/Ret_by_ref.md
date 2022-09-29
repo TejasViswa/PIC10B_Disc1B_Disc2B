@@ -72,6 +72,6 @@ Let us break down what happens here:
     - fun() = 30
         - the [static](static.md) variable x that is returned gets assigned the value of 30
 - Currently x holds the value 30
-- Once `cout << fun()` is called, [static](static.md) variable x is NOT reassigned the value 10 (compiler ignores this because only a [static](static.md) variable is initialized, it is not initialized again) and this is returned
+- Once `cout << fun()` is called, [static](static.md) variable x is NOT reassigned the value 10 (compiler ignores this because once a [static](static.md) variable is initialized, it is not initialized again) and this is returned
 - Therefore, 30 is printed as the output
 
