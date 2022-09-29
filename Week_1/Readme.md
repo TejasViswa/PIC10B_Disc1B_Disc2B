@@ -16,6 +16,7 @@
 - [Type Conversions](theory.md#type-conversions)
 
 ### Thu Sep 29
+- [References](References.md)
 - [Pointers and References](Pointers_and_memory.md)
 - [const correctness](theory.md#const-correctness)
 
@@ -35,5 +36,6 @@
 - [Type Conversions](theory.md#type-conversions)
 
 ### Thu Sep 29
-- [Constructor Intializer Lists](theory.md#constructor-initializer-lists)
+- [References](References.md)
 - [const correctness](theory.md#const-correctness)
+- Brief about HW
