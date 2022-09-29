@@ -344,7 +344,7 @@ d += i;
   We quickly realize that this is not allowed and will actually give you a compiler error. b + 5 cannot be assigned a value of c as this does not make sense to the compiler. This is where programming and mathematics differ as the two symbols '=' have very different meanings and is therefore split between both the assignment '=' and equality '==' operators.
 - So, now, we can generalize that a lvalue can exist on both sides of the assignment operator but an rvalue can only exist on the right hand side of it. Historically, lvalue has been used to denote expressions on the left hand side but in recent times, its name has also been changed to 'locator value' in some languages, in order to avoid this confusion.
 - But what exactly is an lvalue? It is actually anything (by anything, I actually mean a variable, struct, union, etc) that can store some information in a memory location.
-- And what is an rvalue? It is actually the data (could be the value from a variable, literal, expression, etc) stored at some address/memory location.
+- And what is an rvalue? It is actually the data (could be the value from a variable, literal, expression, etc) stored at some address/memory location. (usually temporary values like 1, 'a', etc)
 - So, when you actually use an assignment operator, any expression on the right hand side must evaluate to an rvalue (ie: give you a value that you can store) which can be stored into an lvalue (ie: a memory location).
 - An lvalue reference looks like the references you have used so far and an rvalue reference uses two ampersand '&' symbols instead of one:
   ```c++
