@@ -124,7 +124,7 @@ This is exactly the same as the previous but split up into a separate function.
 - Creating variable in main
 - Creating reference to that variable in function
 
-Here, the line `int &y = x` is still executed(in the function call) but this variable y is not longer a part of the main function but it is a local variable to function `fn`. Therefore, I don't have access to y once the function call ends but every other part of the program is the same.
+Here, the line `int &y = x` is still executed(at beginning of the function call) but this variable y is not longer a part of the main function but it is a local variable to function `fn`. Therefore, I don't have access to y once the function call ends but every other part of the program is the same.
 
 
 Now, lets us split the code in the reverse fashion
@@ -155,4 +155,4 @@ Note: Here, instead of variable x, I'm directly using the function return to pri
 - Creating a variable in function
 - Creating a reference of that variable in the main function
 
-Here, y references x and x can be assigned a value using the function return (everytime you see fn(), replace it with `x` in your mind) and thus both the variables' values are changed
+Here, y references x (`int &y = x` is still executed(at the end function call when it returns x)) and x can be assigned a value using the function return (everytime you see fn(), replace it with `x` in your mind) and thus both the variables' values are changed
