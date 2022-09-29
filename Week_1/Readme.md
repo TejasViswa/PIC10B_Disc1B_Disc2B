@@ -19,6 +19,7 @@
 - [References](References.md)
 - [Pointers and References](Pointers_and_memory.md)
 - [const correctness](theory.md#const-correctness)
+- [Return by References](Ret_by_ref.md)
 
 ## For Disc 2B
 
@@ -38,4 +39,5 @@
 ### Thu Sep 29
 - [References](References.md)
 - [const correctness](theory.md#const-correctness)
+- [Return by References](Ret_by_ref.md)
 - Brief about HW
