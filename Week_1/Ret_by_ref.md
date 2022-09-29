@@ -75,3 +75,80 @@ Let us break down what happens here:
 - Once `cout << fun()` is called, [static](static.md) variable x is NOT reassigned the value 10 (compiler ignores this because once a [static](static.md) variable is initialized, it is not initialized again) and this is returned
 - Therefore, 30 is printed as the output
 
+## Some more on references:
+Look at this code snippet:
+```c++
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int x = 5;
+    int &y = x;
+    y = 6;
+    cout << y << " " << x;
+    return 0;
+}
+```
+Output
+```
+6 6
+```
+In this code snippet, both x and y are synonymous handles to the same memory locations and when y's value was changed, even x's value was changed. Both output 6 when printed.
+
+### Pass by reference:
+Now, lets say I split up the code into a function
+```c++
+#include <iostream>
+using namespace std;
+
+void fn(int &y)
+{
+    y = 6;
+    cout<< y << " ";
+}
+
+int main()
+{
+    int x = 5;
+    fn(x);
+    cout << x;
+    return 0;
+}
+```
+Output
+```
+6 6
+```
+This is exactly the same as the previous but split up into a separate function.
+- Creating variable in main
+- Creating reference to that variable in function
+Here, the line `int &y = x` is still executed(in the function call) but this variable y is not longer a part of the main function but it is a local variable to function `fn`. Therefore, I don't have access to y once the function call ends but every other part of the program is the same.
+
+
+Now, lets us split the code in the reverse fashion
+## Return by reference:
+```c++
+#include <iostream>
+using namespace std;
+
+int& fn()
+{
+    static int x = 5;
+    return x;
+}
+
+int main()
+{
+    fn() = 6;
+    cout << fn() << " " << x;
+    return 0;
+}
+```
+Output
+```
+6 6
+```
+Note: Here, instead of variable y, I'm directly using the function return to reference x.
+- Creating a variable in function
+- Returning a reference in the main function
