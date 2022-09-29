@@ -140,8 +140,9 @@ int& fn()
 
 int main()
 {
+    int &y = fn();
     fn() = 6;
-    cout << fn() << " " << x;
+    cout << y << " " << fn();
     return 0;
 }
 ```
@@ -149,6 +150,7 @@ Output
 ```
 6 6
 ```
-Note: Here, instead of variable y, I'm directly using the function return to reference x.
+Note: Here, instead of variable x, I'm directly using the function return to print x.
 - Creating a variable in function
-- Returning a reference in the main function
+- Creating a reference of that variable in the main function
+Here, y references x and x can be assigned a value using the function return (everytime you see fn(), replace it with `x` in your mind) and thus both the variables' values are changed
