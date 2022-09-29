@@ -32,7 +32,7 @@ But if we use a normal variable, then:
 #include<iostream>
 int fun()
 {
-  static int count = 0;       // using regular variable
+  int count = 0;       // using regular variable
   count++;
   return count;
 }
@@ -48,3 +48,5 @@ Output
 ```
 1 1
 ```
+
+### NOTE: Once a static variable is declared / initialized in a function, that line is not called again. In the above program with the static example, the function is called twice but the value of count is 2. It does not become 0 again and get incremented. The line with static is executed only once in a program and never again. if the compiler sees it again, it is ignored.
