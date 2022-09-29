@@ -5,8 +5,7 @@ Syntax:
 ```c++
 static data_type var_name = var_value; 
 ```
-Following are some interesting facts about static variables in C.
-1) A static int variable remains in memory while the program is running. A normal variable is destroyed when a function call where the variable was declared is over. 
+A static variable remains in memory while the program is running. A normal variable is destroyed when a function call where the variable was declared is over. 
 For example, we can use static int to count a number of times a function is called, but a normal variable can’t be used for this purpose.
 ```c++
 #include<iostream>
