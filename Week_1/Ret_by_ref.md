@@ -32,7 +32,7 @@ Let us break down what happens here:
 - [Global](scope.md) variable x is created and initialized as 5 and it can be accessed anywhere
 - Within main function, fun() is called and then assigned 30
     - fun()
-        - global variable x is assigned a value of 5
+        - global variable x is assigned a value of 10
         - and it is now returned (because return datatype is reference)
     - fun() = 30
         - the [global](scope.md) variable x that is returned gets assigned the value of 30
