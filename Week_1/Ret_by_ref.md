@@ -67,7 +67,7 @@ Output:
 Let us break down what happens here:
 - Within main function, fun() is called and then assigned 30
     - fun() call
-        - fun() is called for the first time, thus [static](static.md) variable int is created and initialized with value 5
+        - fun() is called for the first time, thus [static](static.md) variable int is created and initialized with value 10
         - and it is now returned (because return datatype is reference)
     - fun() = 30
         - the [static](static.md) variable x that is returned gets assigned the value of 30
