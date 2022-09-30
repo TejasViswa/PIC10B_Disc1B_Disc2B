@@ -2,6 +2,21 @@
 
 Please go through [scope](scope.md) and [static](static.md) before you read this section
 
+Whenever you return by reference, you are basically passing a handle to that variable. This means that you can now reference the variable that the function returns through the main program and directly manipulate it via the function call. This is unlike return by value where you can't change the variable itself which only returns a value which you can copy.
+
+```c++
+int x = 5;              // global variable
+
+int fv(){return x;}     // return by value
+int fr(){return x;}     // return by reference
+
+int main()
+{   fv() = 30;          // This doesn't make any sense because what this means is "30 = 30" and you can't assign 30 to 30
+    fr() = 30;          // This is alright because it translates to "x = 30" and you can assign 30 to x
+    return 0;
+}
+```
+
 ## 1. Take a look at the following code:
 (This is slightly different from the example discussed in class)
 ```c++
