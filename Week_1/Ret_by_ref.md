@@ -8,7 +8,7 @@ Whenever you return by reference, you are basically passing a handle to that var
 int x = 5;              // global variable
 
 int fv(){return x;}     // return by value
-int fr(){return x;}     // return by reference
+int& fr(){return x;}     // return by reference
 
 int main()
 {   fv() = 30;          // This doesn't make any sense because what this means is "30 = 30" and you can't assign 30 to 30
