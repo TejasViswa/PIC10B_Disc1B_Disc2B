@@ -85,7 +85,7 @@ int main()
 {
     int x = 5;
     int &y = x;
-    y = 6;
+    y = 6;                  // or x = 6; Both have the same effect
     cout << y << " " << x;
     return 0;
 }
@@ -142,7 +142,7 @@ int& fn()
 int main()
 {
     int &y = fn();
-    fn() = 6;
+    fn() = 6;                 // or y = 6; Both have the same effect
     cout << y << " " << fn();
     return 0;
 }
