@@ -33,11 +33,16 @@ Let us break down what happens here:
 - Within main function, fun() is called and then assigned 30
     - fun()
         - global variable x is assigned a value of 10
-        - and it is now returned (because return datatype is reference)
+        - and x is now returned (because return datatype is reference)
     - fun() = 30
         - the [global](scope.md) variable x that is returned gets assigned the value of 30
 - Currently x holds the value 30
-- Once `cout << fun()` is called, [global](scope.md) variable x is now assigned the value 10 again and this is returned
+- Once `cout << fun()` is called, fn() is called again
+    - fn()
+        - [global](scope.md) variable x is now assigned the value 10 again
+        - and x is now returned (because return datatype is reference)
+    - cout << fn()
+        - [global](scope.md) variable x that is returned is printed to the console
 - Therefore, 10 is printed as the output
 
 ## 2. Take a look at the following code:
@@ -68,11 +73,16 @@ Let us break down what happens here:
 - Within main function, fun() is called and then assigned 30
     - fun() call
         - fun() is called for the first time, thus [static](static.md) variable int is created and initialized with value 10
-        - and it is now returned (because return datatype is reference)
+        - and x is now returned (because return datatype is reference)
     - fun() = 30
         - the [static](static.md) variable x that is returned gets assigned the value of 30
 - Currently x holds the value 30
-- Once `cout << fun()` is called, [static](static.md) variable x is NOT reassigned the value 10 (compiler ignores this because once a [static](static.md) variable is initialized, it is not initialized again) and this is returned
+- Once `cout << fun()` is called, fn() is called again
+    - fn()
+        - [static](static.md) variable x is NOT reassigned the value 10 (compiler ignores this because once a [static](static.md) variable is initialized, it is not initialized again)
+        - and x is now returned (because return datatype is reference)
+    - cout << fn()
+        - [static](static.md) variable x that is returned is printed to the console
 - Therefore, 30 is printed as the output
 
 ## Understanding the above code snippet in another way:
