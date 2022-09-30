@@ -75,7 +75,7 @@ Let us break down what happens here:
 - Once `cout << fun()` is called, [static](static.md) variable x is NOT reassigned the value 10 (compiler ignores this because once a [static](static.md) variable is initialized, it is not initialized again) and this is returned
 - Therefore, 30 is printed as the output
 
-## Some more on references:
+## Understanding the above code snippet in another way:
 Look at this code snippet:
 ```c++
 #include <iostream>
