@@ -37,11 +37,11 @@ Let us break down what happens here:
     - fun() = 30
         - the [global](scope.md) variable x that is returned gets assigned the value of 30
 - Currently x holds the value 30
-- Once `cout << fun()` is called, fn() is called again
-    - fn()
+- Once `cout << fun()` is called, fun() is called again
+    - fun()
         - [global](scope.md) variable x is now assigned the value 10 again
         - and x is now returned (because return datatype is reference)
-    - cout << fn()
+    - cout << fun()
         - [global](scope.md) variable x that is returned is printed to the console
 - Therefore, 10 is printed as the output
 
@@ -77,11 +77,11 @@ Let us break down what happens here:
     - fun() = 30
         - the [static](static.md) variable x that is returned gets assigned the value of 30
 - Currently x holds the value 30
-- Once `cout << fun()` is called, fn() is called again
-    - fn()
+- Once `cout << fun()` is called, fun() is called again
+    - fun()
         - [static](static.md) variable x is NOT reassigned the value 10 (compiler ignores this because once a [static](static.md) variable is initialized, it is not initialized again)
         - and x is now returned (because return datatype is reference)
-    - cout << fn()
+    - cout << fun()
         - [static](static.md) variable x that is returned is printed to the console
 - Therefore, 30 is printed as the output
 
@@ -132,9 +132,15 @@ Output
 ```
 This is exactly the same as the previous but split up into a separate function.
 - Creating variable in main
+    - variable `x` is declared as `int` and assigned value 5
 - Creating reference to that variable in function
+    - fn(x)
+        - (can be thought of as `int &y = x`) local reference variable `y` is now made to reference `x`
+        - y is assigned 6 (since y references x, they both point to the same memory location and they are both assigned the value 6)
+        - y is printed to console with the cout statement (it outputs 6)
+- Finally x is also printed (it also outputs 6 like y) and program ends
 
-Here, the line `int &y = x` is still executed(at beginning of the function call) but this variable y is not longer a part of the main function but it is a local variable to function `fn`. Therefore, I don't have access to y once the function call ends but every other part of the program is the same.
+Here, the line `int &y = x` is still executed(at the beginning of the function call) but this variable y is not longer a part of the main function but it is a local variable to function `fn`. Therefore, you don't have access to y once the function call ends but every other part of the program is the same.
 
 
 Now, lets us split the code in the reverse fashion
@@ -162,8 +168,17 @@ Output
 6 6
 ```
 Note: Here, instead of variable x, I'm directly using the function return to print x.
+
+int &y = fn() does both the following points:
 - Creating a variable in function
+    - fn()
+        - fn() is called for the first time, thus [static](static.md) variable x with datatype int is created and initialized with value 5
+        - and x is now returned (because return datatype is reference)
 - Creating a reference of that variable in the main function
+    - int &y = fn()
+        - y stores the [static](static.md) x that fn() returns and references it
+- fn() = 6 changes the value of x and y as well as they both point to the same memory location
+- Then their values are printed out with the cout statement
 
 Here, y references x (`int &y = x` is still executed(at the end function call when it returns x)) and x can be assigned a value using the function return (everytime you see fn(), replace it with `x` in your mind) and thus both the variables' values are changed.
 
