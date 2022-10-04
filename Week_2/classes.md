@@ -101,3 +101,75 @@ int main()
     return 0;
 }
 ```
+## Example 2
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Dog
+{
+    public:
+    // Functions that are expected to be called within the main program are generally public
+  
+    Dog(string _name):name(_name){}
+
+    void setName(string _name){name = _name;}         // Setter Function
+    string& getName(){return name;}                   // Getter Function
+    
+    void display()                                    // Printer Function
+    {
+      cout << "Dog's details: \n"
+      << "Name: " << name << "\n";
+    }
+    
+    void giveTreat(int num)
+    {
+        switch(num)
+        {
+            case 1 : cout<< name << " is happy. \n";
+                wagTail();
+                break;
+            case 2 : cout<< name << " is very happy. \n";
+                wagTail();
+                bark();
+                break;
+            default : wagTail();
+                break;
+        }
+    }
+    
+    private:
+    // Data Members are usually private
+
+    string name;
+    
+    void bark()
+    {
+        cout<<"Woof! Woof! \n";
+    }
+    
+    void wagTail()
+    {
+        cout<< name << " is wagging its tail! \n";
+    }
+    
+};
+
+int main()
+{
+    Dog D("Mylo");
+    D.display();
+    cout<<'\n';
+    
+    cout<<D.getName()<<" was given a treat \n";
+    D.giveTreat(1);
+    cout<<'\n';
+    
+    cout<<D.getName()<<" was given 2 treats \n";
+    D.giveTreat(2);
+    cout<<'\n';
+    
+    return 0;
+}
+```
