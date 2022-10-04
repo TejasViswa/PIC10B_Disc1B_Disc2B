@@ -14,7 +14,7 @@ class className
 };                     // Class Name ends with semicolon
 ```
 
-Most common syntax for a class:
+## Most common syntax for a class:
 
 ```c++
 class className
@@ -43,4 +43,61 @@ class className
   
   // Insert other private functions here. Usually these are functions that do not require user interaction/input.
 };
+```
+
+## Example 1
+
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Car
+{
+    public:
+    // Functions that are expected to be called within the main program are generally public
+  
+    // Constructor with initializer list
+    Car(string _brand, string _model, int _year): brand(_brand), model(_model), year(_year) {}
+
+    void setDetails(string _brand, string _model, int _year)          // Setter Function
+    {
+        brand = _brand;
+        model = _model;
+        year = _year;
+    }
+    string& getBrand(){return brand;}                                 // Getter Function
+    string& getModel(){return model;}                                 // Getter Function
+    int& getYear(){return year;}                                      // Getter Function
+
+    void display()                                                      // Printer Function
+    {
+      cout << "Car details: \n"
+      << "Brand: " << brand << "\n"
+      << "Model: " << model << "\n"
+      << "Year: " << year << "\n";
+    }
+  
+    private:
+    // Data Members are usually private
+
+    string brand;
+    string model;
+    int year;
+    
+};
+
+int main()
+{
+    Car A("BMW","X5",1999);
+    // This prints the car details
+    A.display();
+    // This also prints the car details
+    cout << "Car details: \n"
+    << "Brand: " << A.getBrand() << "\n"
+    << "Model: " << A.getModel() << "\n"
+    << "Year: " << A.getYear() << "\n";
+    
+    return 0;
+}
 ```
