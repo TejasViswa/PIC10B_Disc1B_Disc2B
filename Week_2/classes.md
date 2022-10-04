@@ -33,7 +33,7 @@ class className
   className(datatype1 _dataMem1, datatype2 _dataMem2): dataMem1(_dataMem1), dataMem2(_dataMem2) {}       // Constructor with initializer list
   
   void setDataMem1(datatype1 _dataMem1){ dataMem1 = _dataMem1; }             // Setter Function
-  datatype1& getDataMem1(){return dataMem1;}                                 // Getter Function
+  datatype1 getDataMem1(){return dataMem1;}                                  // Getter Function
   
   void display()                                                            // Printer Function
   { std::cout << "className with data members: \n"
@@ -52,6 +52,37 @@ class className
   // Insert other private functions here. Usually these are functions that do not require user interaction/input.
 };
 ```
+
+Another important point is how to write your getter and setter functions:
+
+### Identity oriented setters and getters
+```c++
+class Foo
+{
+     X x_;
+public:
+          X & x()       { return x_; }
+    const X & x() const { return x_; }
+};
+int main()
+{
+    Foo f;
+    f.x() = X { ... };
+    return 0;
+}
+```
+### Value oriented setters and getters
+```c++
+/ Value Oriented
+class Foo
+{
+     X x_;
+public:
+     X x() const { return x_; }
+     void x(X x) { x_ = std::move(x); }
+};
+```
+[See More](https://stackoverflow.com/questions/51615363/how-to-write-c-getters-and-setters)
 
 ## Example 1
 
@@ -74,8 +105,8 @@ class Car
         model = _model;
         year = _year;
     }
-    string& getBrand(){return brand;}                                 // Getter Function
-    string& getModel(){return model;}                                 // Getter Function
+    string getBrand(){return brand;}                                 // Getter Function
+    string getModel(){return model;}                                 // Getter Function
     int& getYear(){return year;}                                      // Getter Function
 
     void display()                                                      // Printer Function
@@ -123,7 +154,7 @@ class Dog
     Dog(string _name):name(_name){}
 
     void setName(string _name){name = _name;}         // Setter Function
-    string& getName(){return name;}                   // Getter Function
+    string getName(){return name;}                    // Getter Function
     
     void display()                                    // Printer Function
     {
