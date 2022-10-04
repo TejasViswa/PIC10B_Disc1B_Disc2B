@@ -33,11 +33,14 @@ class className
     << "dataMem2: " << dataMem2 << "\n";
   }
   
+  // Insert other public functions here. Usually these are functions that require user interaction/input.
+  
   private:
   // Data Members are usually private
   
   datatype1 dataMem1;                                                       
   datatype2 dataMem2;
   
+  // Insert other private functions here. Usually these are functions that do not require user interaction/input.
 };
 ```
