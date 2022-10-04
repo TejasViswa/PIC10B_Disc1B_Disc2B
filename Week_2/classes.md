@@ -79,7 +79,7 @@ class Foo
      X x_;
 public:
      X x() const { return x_; }
-     void x(X x) { x_ = std::move(x); }
+     void x(X x) { x_ = x; }              // As you progress further in this course, you will start to use x_ = std::move(x) instead
 };
 ```
 [See More](https://stackoverflow.com/questions/51615363/how-to-write-c-getters-and-setters)
