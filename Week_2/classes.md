@@ -107,7 +107,7 @@ class Car
     }
     string getBrand(){return brand;}                                 // Getter Function
     string getModel(){return model;}                                 // Getter Function
-    int& getYear(){return year;}                                      // Getter Function
+    int getYear(){return year;}                                      // Getter Function
 
     void display()                                                      // Printer Function
     {
