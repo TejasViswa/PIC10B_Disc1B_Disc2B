@@ -93,7 +93,7 @@ int main()
 }
 ```
 
-We use the 'static' keyword for the local variable so that it doesn't expire after the function call. Static variables have a lifetime that is usually for the entire duration of the program. But remember, the scope/visibility of the variable is still local, meaning, you cannot manipulate the variable outside the function.
+We use the '[static](static.md)' keyword for the local variable so that it doesn't expire after the function call. [Static](static.md) variables have a lifetime that is usually for the entire duration of the program. But remember, the [scope/visibility](scope.md) of the variable is still local, meaning, you cannot manipulate the variable outside the function.
 
 ```c++
 #include <iostream>
@@ -108,6 +108,8 @@ int main()
     return 0;
 }
 ```
-In this code snippet, the lifetime and scope of the variable x are only within the same code block. ie: We can't access it after the "}".
+In this code snippet, the [lifetime and scope](scope.md) of the variable x are only within the same code block. ie: We can't access it after the "}".
 
-The **scope** of a variable refers to the areas or the sections of the program in which the variable can be accessed, and the **lifetime** of a variable indicates how long the variable stays alive in the memory.
+The **[scope](scope.md)** of a variable refers to the areas or the sections of the program in which the variable can be accessed, and the **[lifetime](scope.md)** of a variable indicates how long the variable stays alive in the memory.
+
+## Please refer to [Return by Reference](Ret_by_ref.md)
