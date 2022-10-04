@@ -24,8 +24,8 @@ class className
   
   className(datatype1 _dataMem1, datatype2 _dataMem2): dataMem1(_dataMem1), dataMem2(_dataMem2) {}       // Constructor with initializer list
   
-  void setDataMem1(datatype1 _dataMem1){ dataMem1 = _dataMem1 }             // Setter Function
-  datatype1& getDataMem1(){return dataMem1}                                 // Getter Function
+  void setDataMem1(datatype1 _dataMem1){ dataMem1 = _dataMem1; }             // Setter Function
+  datatype1& getDataMem1(){return dataMem1;}                                 // Getter Function
   
   void display()                                                            // Printer Function
   { std::cout << "className with data members: \n"
