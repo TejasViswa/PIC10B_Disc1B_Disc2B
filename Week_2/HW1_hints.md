@@ -78,17 +78,34 @@
 ## Task 8 - help_see_magic_potential
 Follow the structure below:
 ### Structure for the help_see_magic_potential function:
-- if exceeded last slot:
-  - if it is a magic square:
-    - print the square
-- else
-  - if slot is empty
-    - for-loop through 1 to size*size
-      - [Insert your logic to handle this]
-  - else
-    - Go to next slot (hint: use recursion)
-
-Make sure you also insert the row optimization part
+```c++
+if(exceeded last slot)
+{
+    if (it is a magic square)
+    {
+        print the square
+    }
+    // Remember there is no else here because once all slots are filled and it is not a magic square, there are no more lines to execute in this function, the control flow just returns to the previous function call without printing anything just like it should
+}
+else // slots are remaining
+{
+    if (slot is empty)
+    {
+        for-loop through 1 to size*size (including size*size)
+        {
+            [Insert your logic to handle this]
+            [Remember you also need to check if value is not in used_up set and only then fill the data vector and used_up set]
+            [Once you fill the data vector, you will need a recursive function call to go the next slot and a reset (set the value at data vector to zero and erase that value from used_up set) below that]
+        }
+    }
+    else // slot is not empty, you shouldn't do anything in this slot, just go to the next slot
+    {
+        Go to next slot (hint: use recursion (call the function again with slot_considered+1 ))
+    }
+}
+```
+- Remember slot-considered is your index and the value that you insert at that slot is not the same.
+- Make sure you also insert the row optimization part
 
 ## Debugging your code:
 - Use the debugger... a lot. Its hard to solve it otherwise.
