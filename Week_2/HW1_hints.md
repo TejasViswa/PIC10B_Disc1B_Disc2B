@@ -48,13 +48,13 @@
 - Part 2
   -  Get row sum and column sum for each row and column (you could make use of `%` operator) and check if they equal magic_total. Make use of the get function that you previously defined.
   - Remember that there is only 1 right diagonal and 1 left diagonal for any square. Use appropriate if conditions(find the pattern) to extract the diagonal sums.
-  - All in all, you could write an efiicient code with just two for-loops which are nested and do all these checks.
+  - All in all, you could write an efficient code with just two for-loops which are nested and do all these checks.
     - How do you do this?
     ```c++
     for(iterate with a variable i from 0 to size-1)
     { 
         reset col_sum, row_sum variables
-        for(iterate with a variable j from o to size-1)
+        for(iterate with a variable j from 0 to size-1)
         {
             add to row_sum, the value at ith row and jth column // Hint: use get function
             add to col_sum, the value at jth row and ith column // Hint: use get function
