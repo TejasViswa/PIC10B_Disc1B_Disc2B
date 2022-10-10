@@ -96,7 +96,7 @@ else // slots are remaining
         {
             [Insert your logic to handle this]
             [Remember you also need to check if value is not in used_up set and only then fill the data vector and used_up set]
-            // You could also insert the row optimization(with an if-statement) here but remember to reset (set the value at data vector to zero and erase that value from used_up set) and continue
+            // You could also insert the row optimization(with an if-statement) here but remember to reset (set the value at data vector to zero and erase that value from used_up set) [on failure of row_has_magic_total] and use a continue statement
             [Once you fill the data vector, you will need a recursive function call to go the next slot and a reset (set the value at data vector to zero and erase that value from used_up set) below that]
         }
     }
