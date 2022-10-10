@@ -79,6 +79,7 @@
 Follow the structure below:
 ### Structure for the help_see_magic_potential function:
 ```c++
+// You could insert the row optimization(with an if-statement) here but remember to return the function call on failure (of row_has_magic_total)
 if(exceeded last slot)
 {
     if (it is a magic square)
@@ -95,6 +96,7 @@ else // slots are remaining
         {
             [Insert your logic to handle this]
             [Remember you also need to check if value is not in used_up set and only then fill the data vector and used_up set]
+            // You could also insert the row optimization(with an if-statement) here but remember to reset (set the value at data vector to zero and erase that value from used_up set) and continue
             [Once you fill the data vector, you will need a recursive function call to go the next slot and a reset (set the value at data vector to zero and erase that value from used_up set) below that]
         }
     }
