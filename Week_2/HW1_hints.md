@@ -107,7 +107,7 @@ else // slots are remaining
 }
 ```
 - Remember slot-considered is your index and the value that you insert at that slot is not the same.
-- Make sure you also insert the row optimization part
+- Make sure you also insert the row optimization part in only one place not both
 
 ## Debugging your code:
 - Use the [debugger](Debugger.md)... a lot. Its hard to solve it otherwise.
