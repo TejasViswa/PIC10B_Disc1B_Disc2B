@@ -6,6 +6,7 @@
 - [Operator Overloading](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_5/Operator_Overloading.md)
 - [Operator Overloading Exercises](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_3/op_ovrld_ex.md)
 ### Thu Oct 13
+- [Operator Overloading](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_5/Operator_Overloading.md)
 
 ## For Disc 2B
 ### Tue Oct 11
