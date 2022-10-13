@@ -15,5 +15,5 @@
 - HW1 Solution
 ### Thu Oct 13
 - HW1 Conceptual style Questions
-- Sorting and Algorithms
+- [Sorting and Algorithms](Sorting_and_algo.md)
 - [Operator Overloading](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_5/Operator_Overloading.md)
