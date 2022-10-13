@@ -1,6 +1,6 @@
 # Sorting and Algorithms
 
-This file is to only serve as theory for the code that Professor has already provided
+This file is to only serve as general theory for the three sorts that professor has already explained
 
 ## Selection Sort
 
