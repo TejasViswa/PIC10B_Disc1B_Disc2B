@@ -12,6 +12,6 @@
 
 ## For Disc 2B
 ### Tue Oct 18
-- [TImer.hpp](Timer.hpp)
-- [Timer.cpp](Timer.cpp)
+- [timer.hpp](timer.hpp)
+- [timer.cpp](timer.cpp)
 - HW2 Hints
