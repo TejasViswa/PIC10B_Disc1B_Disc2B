@@ -17,3 +17,9 @@
 - [timer.hpp](timer.hpp)
 - [timer.cpp](timer.cpp)
 - HW2 Hints
+
+### Thu Oct 20
+- [timer.hpp](timer.hpp)
+- [timer.cpp](timer.cpp)
+- [Tips for Operator Overloading](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_5/Operator_Overloading.md)
+- HW2 Hints
