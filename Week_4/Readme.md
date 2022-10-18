@@ -12,6 +12,8 @@
 
 ## For Disc 2B
 ### Tue Oct 18
+- [Linear and Binary Search](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_5/Miscellaneous_Concepts.md#algorithms-and-their-complexity)
+- [Merge Sort](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_3/Sorting_and_algo.md#merge-sort)
 - [timer.hpp](timer.hpp)
 - [timer.cpp](timer.cpp)
 - HW2 Hints
