@@ -16,7 +16,7 @@
 - [Merge Sort](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_3/Sorting_and_algo.md#merge-sort)
 - [timer.hpp](timer.hpp)
 - [timer.cpp](timer.cpp)
-- HW2 Hints
+- [HW2 Hints](HW2_hints.md)
 
 ### Thu Oct 20
 - [timer.hpp](timer.hpp)
