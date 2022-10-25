@@ -51,8 +51,8 @@ X X::operator+ () const {
 ```c++
 // Make sure +=,-=,*=,/=,%= are implemented
 
-X operator+ (X const& lhs, X const& rhs) {
-  return tmp += rhs;
+X operator+ (X lhs, X const& rhs) {
+  return lhs += rhs;
 }
 
 // Similar implementations follow for -,*,/,%
