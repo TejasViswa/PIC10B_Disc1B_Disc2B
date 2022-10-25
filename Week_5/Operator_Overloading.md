@@ -87,7 +87,7 @@ X& X::operator+= (X const& rhs) {
 
 ### Operator ==,!=
 ```c++
-bool operator== (X const& lhs, X cosnt& rhs) {
+bool operator== (X const& lhs, X const& rhs) {
   return /* check for whatever means equality */
 }
 
