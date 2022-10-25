@@ -5,7 +5,7 @@ I'll first talk about questions 1-3 (these code snippets do not involve the opti
 
 ## Question 1:
 - All slots are filled and it is a magic square (although it being a magic square does not affect the number of function calls):
-- First function call is within see_magic_potential and is always true for all the snippets.        - 1
+- First function call is within see_magic_potential and is always true for all the snippets        - 1
 
 Let us look at the function structure:
 ```c++
@@ -66,6 +66,7 @@ How to think of this visually:
 1  +  _   _   _   3   5   7   8   1   6 
 ```
 - In this scenario, six cases (3x2x1) are possible: (but note that the number of function calls are different)
+
 Case 1:
 ```
 1  +  2   4   9   3   5   7   8   1   6 
@@ -75,9 +76,9 @@ Case 2:
 - To reach this case, the control has to go to the third function call overall:
 ```
 1  +  2   9   _   3   5   7   8   1   6 
-              1
+          1
 1  +  2   9   4   3   5   7   8   1   6 
-              1 + 1 + 1 + 1 + 1 + 1 + 1 + 1           =         8
+          1 + 1 + 1 + 1 + 1 + 1 + 1 + 1               =        8
 ```
 Case 3:
 - To reach this case, the control has to go to the second function call overall:
@@ -91,9 +92,9 @@ Case 4:
 - To reach this case, the control has to go to the third function call overall:
 ```
 1  +  4   9   _   3   5   7   8   1   6 
-              1
+          1
 1  +  4   9   2   3   5   7   8   1   6 
-              1 + 1 + 1 + 1 + 1 + 1 + 1 + 1            =         8
+          1 + 1 + 1 + 1 + 1 + 1 + 1 + 1               =         8
 ```
 Case 5:
 - To reach this case, the control has to go to the second function call overall:
@@ -108,9 +109,9 @@ Case 6:
 - To reach this case, the control has to go to the third function call overall:
 ```
 1  +  9   4   _   3   5   7   8   1   6 
-              1
+          1
 1  +  9   4   2   3   5   7   8   1   6 
-              1 + 1 + 1 + 1 + 1 + 1 + 1 + 1            =         8
+          1 + 1 + 1 + 1 + 1 + 1 + 1 + 1                =         8
 ```
 - Total = 10+8+9+8+9+8 = 52
 
