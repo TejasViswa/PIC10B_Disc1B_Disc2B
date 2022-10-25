@@ -132,7 +132,8 @@ Total = 10
 
 ## Question 5:
 
-- What do you think the answer to this should be? There can be in total 3X2 scenarios but optimization is applied at the end of each row so all but one scenario remains which is:
+- What do you think the answer to this should be?
+- There can be in total 3X2 scenarios but optimization is applied at the end of each row so all but one scenario remains which is:
 (The other scenario is 4 9 6 ..... and (4+9+6) != 15 and so on but notice that at the end of row, there is only 1 number that can work and anything number will not work)
 ```
 1  +  4   9   2   3   5   7   8   1   6 
