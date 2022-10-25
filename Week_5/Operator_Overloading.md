@@ -35,7 +35,9 @@
   - Sometimes, when there are multiple equally suitable candidates available, the compiler gets confused and calls the function call ambiguous meaning that the overloading could not be resolved. Then either deleting the other candidates or making the cast explicit will help in resolving the situation. Another solution could be to create a separate function with those specific operands but this solution would be too specific to the scenario and would not help in all the cases.
 
 ## General Format for Operator Overloading
-
+```diff
+- Note: This is only a recommended format and is not the only way to implement it
+```
 ### Unary Operator +,-
 ```c++
 X X::operator- () const {
