@@ -12,3 +12,4 @@
 - [Midterm Review - Misc Concepts](Miscellaneous_Concepts.md)
 - [Midterm Review - Tips for Operator Overloading](Operator_Overloading.md)
 - [Midterm Review - Sorting and Algorithms](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_3/Sorting_and_algo.md)
+- [Solution to HW1 Conceptual Question Snippets](conceptual_hw1_soln.md)
