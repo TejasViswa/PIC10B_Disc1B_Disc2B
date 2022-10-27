@@ -36,7 +36,7 @@
 
 ## General Format for Operator Overloading
 ```diff
-- Note: This is only a recommended format and is not the only way to implement it
+- Note: This is only a recommended format and is not the only way to implement it. Please refer to your Professor's notes for the appropriate implementation.
 ```
 ### Unary Operator +,-
 ```c++
@@ -52,7 +52,11 @@ X X::operator+ () const {
 ### Binary Operator +,-,*,/,%
 ```c++
 // Make sure +=,-=,*=,/=,%= are implemented
-
+X operator+ (X const& lhs, X const& rhs) {
+  X temp(lhs); // or X temp = lhs
+  return temp += rhs;
+}
+// OR
 X operator+ (X lhs, X const& rhs) {
   return lhs += rhs;
 }
@@ -81,6 +85,11 @@ istream& operator>> (istream& is, X& x) {
 
 ### Operator +=,-=,*=,/=,%=
 ```c++
+// Without Chaining/compounding
+void X::operator+= (X const& rhs) {
+  // apply appropriate changes to *this
+}
+// With Chaining/compounding
 X& X::operator+= (X const& rhs) {
   // apply appropriate changes to *this
   return *this;
