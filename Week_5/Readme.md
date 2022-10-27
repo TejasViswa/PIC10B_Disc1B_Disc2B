@@ -4,7 +4,7 @@
 
 ## For Disc 1B
 ### Tue Oct 25
-- [Memory Managment](Memory_Management.md)
+- [Memory Management](Memory_Management.md)
 - [Inheritance Identifiers](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_4/Inheritance_Identifiers.md)
 
 ## For Disc 2B
