@@ -19,7 +19,7 @@
 		- can you take the address of the expression
 
 ## lvalue and rvalues
-- An ==lvalue== is an expression referring to an object (an object is a region of storage)
+- An **lvalue** is an expression referring to an object (an object is a region of storage)
 	- typically an entity which has a name
 	- lifetime persists beyond the current statement
 	- must be able to take the address of using the & operator
@@ -39,7 +39,7 @@ const int foo2 = 7;
 foo2 = 9;    // this is also an lvalue
 ```
 
--  An ==rvalue== is anything that isn't an lvalue (not so obvious later on)
+-  An **rvalue** is anything that isn't an lvalue (not so obvious later on)
 	- typically an entity which does not have a name
 	- lifetime usually ends with the current statement
 	- may not be able to take the address of the entity
@@ -121,4 +121,4 @@ int const *p = &MAX;         // OK: MAX is an lvalue
 | non-modifiable lvalue | yes                     | no            |
 | (non-class) rvalue      | no                      | no            |
 
-[References](References.md)
+[References](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_1/Pointers_and_memory.md#references)
