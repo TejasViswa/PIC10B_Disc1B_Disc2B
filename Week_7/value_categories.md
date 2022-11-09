@@ -25,7 +25,7 @@
 	- must be able to take the address of using the & operator
 
 `Widget *button = new Widget;`
-- button is an lvalue, data type "pointer to Widget"
+- `button` is an lvalue, data type "pointer to Widget"
 	- has a name
 	- can take the address of button
 - `*button` is an lvalue
