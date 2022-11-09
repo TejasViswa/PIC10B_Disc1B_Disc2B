@@ -28,7 +28,7 @@
 - `button` is an lvalue, data type "pointer to Widget"
 	- has a name
 	- can take the address of button
-- `*button` is an lvalue
+- `*button` is an lvalue, object pointed to by button
 	- does not actually have a name
 	- can take the address of `*button`
 ```c++
