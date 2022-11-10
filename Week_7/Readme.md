@@ -6,7 +6,7 @@
 - HW 3 Help
 
 ### Thu Nov 10
-- Value Categories - lvalues and rvalues references
+- [lvalues and rvalues references](move_semantics.md)
 - [Uniform Initialization](uniform_initialization.md)
 
 ## For Disc 2B
@@ -18,6 +18,5 @@
 
 ### Thu Nov 10
 - [Uniform Initialization](uniform_initialization.md)
-- Value Categories - lvalues and rvalues references
-- Move Constructor
+- [lvalues and rvalues references, move semantics](move_semantics.md)
 - HW 3 Help
