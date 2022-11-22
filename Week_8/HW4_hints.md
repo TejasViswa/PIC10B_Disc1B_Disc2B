@@ -3,14 +3,14 @@
 ## Task #5
 - You should be able to loop through an empty linked list
 ```c++
-LinkedList ll {{}};
+LinkedList ll {{}}; // There's a lot of ways to make an empty list
 for(auto it = begin(); it! = end(); it++ )
 { std::cout<<*it<<" ";
 }
 std::cout<<std::endl;
 ```
-- Now remember if control has to enter within the for loop then begin()!=end(). But for empty list, is this true? If not, why not?
-- What is first and last for empty list?
+- Now remember if control has to enter within the for loop then begin()!=end(). But for empty list, is this true? Why ot why not?
+- What is first and last for ll?
 - Then what do you think should end() or rend() should be? (Remember its not okay to deference a nullptr (cannot use `->` or `*`) but its okay to return it)
 
 ## Task #6
