@@ -10,4 +10,4 @@
 - [Binary Search Trees](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_9/BST_Theory.md)
 - [HW4 Hints](https://github.com/TejasViswa/PIC10B_Disc1B_Disc2B/blob/main/Week_8/HW4_hints.md)
 
-Happy Thanksgiving!
+## Happy Thanksgiving!
