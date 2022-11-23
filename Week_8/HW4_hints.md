@@ -3,7 +3,7 @@
 ## Task #5
 - You should be able to loop through an empty linked list
 ```c++
-LinkedList ll {{}}; // There's a lot of ways to make an empty list
+LinkedList ll {}; // There's a lot of ways to make an empty list
 for(auto it = ll.begin(); it! = ll.end(); ++it )
 { std::cout<<*it<<" ";
 }
