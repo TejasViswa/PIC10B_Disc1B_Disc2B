@@ -30,4 +30,4 @@ ll4 = ll1; \\ This is copy assignment
 LinkedList ll5;
 ll5 = std::move(ll1); \\ This is move assignment
 ```
-- If the constructor is called even though you perform an assignment then a copy elision is taking place. It is an optimization performed by your compiler.
+- If the constructor is called even though you perform an assignment then a [copy elision](https://en.cppreference.com/w/cpp/language/copy_elision) is taking place. It is an optimization performed by your compiler.
