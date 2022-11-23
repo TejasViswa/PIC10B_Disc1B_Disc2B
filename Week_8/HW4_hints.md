@@ -9,7 +9,7 @@ for(auto it = ll.begin(); it! = ll.end(); it++ )
 }
 std::cout<<std::endl;
 ```
-- Now remember if control has to enter within the for loop then begin()!=end(). But for empty list, is this true? Why ot why not?
+- Now remember if control has to enter within the for loop then ll.begin()!=ll.end(). But for empty list, is this true? Why ot why not?
 - What is first and last for ll?
 - Then what do you think should end() or rend() should be? (Remember its not okay to deference a nullptr (cannot use `->` or `*`) but its okay to return it)
 
