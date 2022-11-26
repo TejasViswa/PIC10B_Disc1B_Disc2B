@@ -13,4 +13,5 @@
 ## Additional Links
 - [Binary Search Tree Operations](https://www.geeksforgeeks.org/introduction-to-binary-search-tree-data-structure-and-algorithm-tutorials/?ref=lbp)
   - Use this link as a reference only - Only to understand concepts
+- [HW5 Hints](HW5_hints.md)
 ## Happy Thanksgiving!
