@@ -27,4 +27,4 @@
 - [Binary Search Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BST.html)
 - Final Revision
 
-# ALL THE BEST FOR YOUR FINALS!!!
+## ALL THE BEST FOR YOUR FINALS!!!
