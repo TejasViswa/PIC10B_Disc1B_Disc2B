@@ -151,7 +151,7 @@ class Dog
     public:
     // Functions that are expected to be called within the main program are generally public
   
-    Dog(string _name):name(_name){}
+    Dog(string _name){name = _name;}
 
     void setName(string _name){name = _name;}         // Setter Function
     string getName(){return name;}                    // Getter Function
